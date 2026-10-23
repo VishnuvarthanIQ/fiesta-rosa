@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Packages &amp; Transparent Pricing | Fiesta Rosa Events</title>
+  <meta name="description" content="Compare Fiesta Rosa event packages (Sparkle, Royal, and Grand Gala), adjust guest count estimates, and select optional celebration add-ons.">
+  <link rel="icon" href="assets/img/icons/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=4">
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico?v=4">
+  <link id="bsCss" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script>
+    (function () {
+      var d = localStorage.getItem('dir') || 'ltr';
+      var t = localStorage.getItem('theme') || 'light';
+      var h = document.documentElement;
+      h.dir = d;
+      h.dataset.theme = t;
+      h.dataset.bsTheme = t;
+      h.classList.add('js');
+      if (d === 'rtl') {
+        var l = document.getElementById('bsCss');
+        if (l) l.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==================== SITE HEADER & NAVIGATION ==================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" id="brand" href="index.html" aria-label="Fiesta Rosa Events Home">
+          <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+          <span class="brand-text">Fiesta<em>Rosa</em></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto gap-lg-1 gap-xl-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-stars me-2 text-pink"></i>Celebrations</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-gem me-2 text-pink"></i>Signature Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link active" href="packages.html" aria-current="page">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <div class="header-actions d-flex align-items-center flex-nowrap gap-2 py-2 py-lg-0">
+            <button id="themeBtn" class="btn btn-icon theme-btn" type="button" aria-label="Toggle light and dark theme">🌙</button>
+            <button id="dirBtn" class="btn btn-icon dir-btn" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+            <div class="dropdown auth-dropdown d-inline-flex align-items-center">
+              <a class="btn btn-outline-brand d-inline-flex align-items-center gap-1" href="login.html" id="authSignInBtn">
+                <i class="bi bi-person-circle"></i>
+                <span id="authBtnLabel">Sign In</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow" id="authDropdownMenu" aria-labelledby="authSignInBtn"></ul>
+            </div>
+            <a class="btn btn-brand" href="contact.html#booking">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main">
+    <!-- 1. Centered Hero Banner (Unique Hero Photo #6) -->
+    <section class="hero hero-packages" style="background-image: url('assets/img/hero/packages.jpg');" role="img" aria-label="Premium reception celebration gala setup with fairy lights">
+      <div class="container hero-inner reveal">
+        <h1 class="mb-3">Packages &amp; Transparent Pricing</h1>
+        <p class="lead mb-4">Select a celebration package, adjust your guest count slider, and customize add-ons to see your live estimate.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a class="btn btn-brand btn-lg" href="#estimator">Calculate My Estimate</a>
+          <a class="btn btn-light btn-lg" href="contact.html#booking">Schedule Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Estimator & Packages -->
+    <section class="section" id="estimator">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2"><i class="bi bi-sliders me-1"></i>Interactive Price Estimator</span>
+          <h2>Transparent Investment &amp; Live Estimator</h2>
+          <p class="muted mx-auto" style="max-width: 640px;">Select your preferred celebration tier, calibrate guest counts, and toggle specialty enhancements. Base pricing covers up to 50 guests with clear per-guest scaling.</p>
+        </div>
+
+        <!-- Guest Slider & Optional Add-ons Card -->
+        <div class="card p-4 p-md-5 mx-auto mb-5 reveal shadow-sm" style="max-width: 860px;">
+          <div class="mb-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+              <div>
+                <label for="guests" class="form-label fw-bold fs-5 text-heading mb-1 d-block">
+                  <i class="bi bi-people-fill text-pink me-2"></i>Estimated Guest Count
+                </label>
+                <p class="small muted mb-0">Base package covers 50 guests. Additional guest rates scale automatically.</p>
+              </div>
+              <div class="d-inline-flex align-items-center bg-soft px-3 py-1 rounded-pill border">
+                <span class="fs-5 fw-bold text-pink me-1" id="guestOut">50</span>
+                <span class="small fw-semibold text-muted">Guests</span>
+              </div>
+            </div>
+            <input type="range" class="form-range" id="guests" min="50" max="300" step="10" value="50" aria-label="Estimated guest count slider">
+            <div class="d-flex justify-content-between muted small mt-2">
+              <span><i class="bi bi-person me-1"></i>50 (Intimate)</span>
+              <span><i class="bi bi-people me-1"></i>150 (Signature)</span>
+              <span><i class="bi bi-buildings me-1"></i>300 (Grand Gala)</span>
+            </div>
+          </div>
+
+          <div class="pt-4 border-top">
+            <div class="mb-3">
+              <span class="fw-bold fs-6 text-heading"><i class="bi bi-stars text-gold me-2"></i>Curated Celebration Add-Ons</span>
+              <p class="small muted mb-0">Select optional high-impact enhancements to instantly simulate your tailored investment.</p>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="pkg-addon-card d-flex align-items-center p-3 rounded-3 border h-100 cursor-pointer" for="ad1">
+                  <div class="form-check m-0 me-3">
+                    <input class="form-check-input pkg-addon" type="checkbox" id="ad1" value="360° Video Booth" data-cost="450">
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-semibold small"><i class="bi bi-camera-reels text-pink me-1"></i>360° Glam Video Booth</span>
+                      <span class="badge-gold small">+&#36;450</span>
+                    </div>
+                    <p class="muted small mb-0">Instant guest downloads &amp; red carpet lighting.</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-sm-6">
+                <label class="pkg-addon-card d-flex align-items-center p-3 rounded-3 border h-100 cursor-pointer" for="ad2">
+                  <div class="form-check m-0 me-3">
+                    <input class="form-check-input pkg-addon" type="checkbox" id="ad2" value="Mariachi / Hora Loca" data-cost="650">
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-semibold small"><i class="bi bi-music-note-beamed text-pink me-1"></i>Live Mariachi / Hora Loca</span>
+                      <span class="badge-gold small">+&#36;650</span>
+                    </div>
+                    <p class="muted small mb-0">45-minute live spectacle with stilt-walkers &amp; props.</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-sm-6">
+                <label class="pkg-addon-card d-flex align-items-center p-3 rounded-3 border h-100 cursor-pointer" for="ad3">
+                  <div class="form-check m-0 me-3">
+                    <input class="form-check-input pkg-addon" type="checkbox" id="ad3" value="Custom Neon Sign" data-cost="300">
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-semibold small"><i class="bi bi-lightbulb text-pink me-1"></i>Custom Neon Name Sign</span>
+                      <span class="badge-gold small">+&#36;300</span>
+                    </div>
+                    <p class="muted small mb-0">Handcrafted acrylic keepsake for head table or wall.</p>
+                  </div>
+                </label>
+              </div>
+              <div class="col-sm-6">
+                <label class="pkg-addon-card d-flex align-items-center p-3 rounded-3 border h-100 cursor-pointer" for="ad4">
+                  <div class="form-check m-0 me-3">
+                    <input class="form-check-input pkg-addon" type="checkbox" id="ad4" value="Cold Sparklers &amp; Clouds" data-cost="500">
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-semibold small"><i class="bi bi-sparkles text-pink me-1"></i>Waltz Cold Sparklers &amp; Clouds</span>
+                      <span class="badge-gold small">+&#36;500</span>
+                    </div>
+                    <p class="muted small mb-0">4 dry-ice fog machines &amp; indoor safe fountain pyros.</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Luxury Package Tiers -->
+        <div class="row g-4 align-items-stretch pt-3">
+          <!-- Tier 1: Sparkle -->
+          <div class="col-lg-4 col-md-6 reveal d-flex">
+            <div class="card w-100 text-center pkg lift position-relative d-flex flex-column" data-name="Sparkle">
+              <div class="pkg-img-wrap position-relative overflow-hidden">
+                <img src="assets/img/Sparkle.jpg" class="card-img-top" alt="Sparkle celebration package intimate reception setup" loading="lazy" width="800" height="500">
+                <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 shadow-sm small py-1 px-3 rounded-pill"><i class="bi bi-gem me-1 text-pink-bright"></i>Essential Tier</span>
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="h4 mb-1">Sparkle</h3>
+                <p class="small muted mb-2">Ideal for intimate ballrooms &amp; chic private venues</p>
+                
+                <div class="my-3 py-2 border-top border-bottom">
+                  <div class="price display-6 fw-bold text-pink" data-base="2500" data-per="25">$2,500</div>
+                  <div class="muted small mt-1">Base package (up to 50 guests)</div>
+                  <span class="badge bg-secondary-subtle text-reset small mt-1">+&#36;25 per extra guest</span>
+                </div>
+
+                <div class="p-2 bg-soft rounded-2 mb-3 text-center small border planning-horizon">
+                  <i class="bi bi-hourglass-split text-pink me-1"></i>Planning Horizon: <strong class="text-heading">2–3 Months</strong>
+                </div>
+
+                <ul class="list-unstyled my-3 flex-grow-1 text-start small d-flex flex-column gap-2">
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Curated venue shortlist &amp; 3 accompanied site tours</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Day-of Lead Coordinator (8 hours on-site coverage)</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Essential centerpiece &amp; guest table styling kit</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Master event timeline &amp; digital vendor checklist</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Full 24/7 Client Dashboard family portal access</span></li>
+                </ul>
+
+                <div class="mt-auto pt-3 border-top d-flex flex-column gap-2">
+                  <button class="btn btn-brand w-100 py-2" type="button" data-pkg="Sparkle" aria-pressed="false">Select Sparkle</button>
+                  <a class="btn btn-outline-brand w-100 py-2" href="contact.html#booking">Book Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Royal (RECOMMENDED) -->
+          <div class="col-lg-4 col-md-6 reveal d-flex">
+            <div class="card w-100 text-center pkg popular lift position-relative d-flex flex-column border-gold-premium" data-name="Royal">
+              <span class="ribbon shadow-sm"><i class="bi bi-crown-fill me-1"></i>Most Popular &bull; Recommended</span>
+              <div class="pkg-img-wrap position-relative overflow-hidden">
+                <img src="assets/img/Royal.jpg" class="card-img-top" alt="Royal celebration package grand ballroom and floral stage" loading="lazy" width="800" height="500">
+                <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 shadow-sm small py-1 px-3 rounded-pill"><i class="bi bi-stars me-1 text-gold"></i>Signature Choice</span>
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="h4 mb-1 text-pink">Royal</h3>
+                <p class="small muted mb-2">Our most requested full-scale milestone experience</p>
+                
+                <div class="my-3 py-2 border-top border-bottom bg-gold-subtle rounded-3">
+                  <div class="price display-6 fw-bold text-pink" data-base="5500" data-per="35">$5,500</div>
+                  <div class="muted small mt-1">Base package (up to 50 guests)</div>
+                  <span class="badge bg-secondary-subtle text-reset small mt-1">+&#36;35 per extra guest</span>
+                </div>
+
+                <div class="p-2 bg-gold-subtle rounded-2 mb-3 text-center small border border-gold planning-horizon">
+                  <i class="bi bi-hourglass-split text-gold me-1"></i>Planning Horizon: <strong class="text-gold">6–9 Months</strong>
+                </div>
+
+                <ul class="list-unstyled my-3 flex-grow-1 text-start small d-flex flex-column gap-2">
+                  <li class="d-flex align-items-start fw-semibold"><i class="bi bi-stars text-gold me-2 mt-1 flex-shrink-0"></i><span>Everything included in Sparkle, plus:</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Custom floral arch, stage styling &amp; backdrop</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Professional photography coverage (6 hrs) + portraits</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Bilingual DJ, bilingual MC &amp; intelligent uplighting</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Foil-pressed bilingual invitation suite (100 pieces)</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Two dedicated day-of coordinators on-site</span></li>
+                </ul>
+
+                <div class="mt-auto pt-3 border-top d-flex flex-column gap-2">
+                  <button class="btn btn-brand w-100 py-2 shadow-sm" type="button" data-pkg="Royal" aria-pressed="false">Select Royal</button>
+                  <a class="btn btn-outline-brand w-100 py-2" href="contact.html#booking">Book Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Grand Gala -->
+          <div class="col-lg-4 col-md-6 mx-md-auto reveal d-flex">
+            <div class="card w-100 text-center pkg lift position-relative d-flex flex-column" data-name="Grand Gala">
+              <div class="pkg-img-wrap position-relative overflow-hidden">
+                <img src="assets/img/Grand Gala.jpg" class="card-img-top" alt="Grand Gala celebration package royal ballroom with chandeliers and illuminated dance floor" loading="lazy" width="800" height="500">
+                <span class="badge bg-dark bg-opacity-75 text-white position-absolute top-0 start-0 m-3 shadow-sm small py-1 px-3 rounded-pill"><i class="bi bi-award-fill me-1 text-gold"></i>VIP Couture</span>
+              </div>
+              <div class="card-body d-flex flex-column p-4">
+                <h3 class="h4 mb-1">Grand Gala</h3>
+                <p class="small muted mb-2">Unmatched luxury with cinema media &amp; coaching</p>
+                
+                <div class="my-3 py-2 border-top border-bottom">
+                  <div class="price display-6 fw-bold text-pink" data-base="9800" data-per="50">$9,800</div>
+                  <div class="muted small mt-1">Base package (up to 50 guests)</div>
+                  <span class="badge bg-secondary-subtle text-reset small mt-1">+&#36;50 per extra guest</span>
+                </div>
+
+                <div class="p-2 bg-soft rounded-2 mb-3 text-center small border planning-horizon">
+                  <i class="bi bi-hourglass-split text-pink me-1"></i>Planning Horizon: <strong class="text-heading">12–18 Months</strong>
+                </div>
+
+                <ul class="list-unstyled my-3 flex-grow-1 text-start small d-flex flex-column gap-2">
+                  <li class="d-flex align-items-start fw-semibold"><i class="bi bi-stars text-gold me-2 mt-1 flex-shrink-0"></i><span>Everything included in Royal, plus:</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Dedicated Senior Event Director + 2 assistant directors</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>4K Cinema film, drone aerials &amp; social teaser reels</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Multi-tier custom designer cake &amp; gourmet dessert bar</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>4 Private court waltz &amp; surprise dance coaching sessions</span></li>
+                  <li class="d-flex align-items-start"><i class="bi bi-check-circle-fill text-pink me-2 mt-1 flex-shrink-0"></i><span>Full 10-hour unlimited photography + editorial pre-shoot</span></li>
+                </ul>
+
+                <div class="mt-auto pt-3 border-top d-flex flex-column gap-2">
+                  <button class="btn btn-brand w-100 py-2" type="button" data-pkg="Grand Gala" aria-pressed="false">Select Grand Gala</button>
+                  <a class="btn btn-outline-brand w-100 py-2" href="contact.html#booking">Book Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selection Confirmation Status Message -->
+        <div id="pkgMsg" class="card text-center p-3 mt-4 fw-semibold border-gold bg-gold-subtle d-none shadow-sm" role="status"></div>
+        <p class="text-center muted small mt-3 mb-0">All figures are transparent starting estimates. Selecting a package saves your choices to your Client Dashboard.</p>
+      </div>
+    </section>
+
+    <!-- 3. Package Comparison Table -->
+    <section class="section alt" id="compare">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2"><i class="bi bi-table me-1"></i>Deliverables Breakdown</span>
+          <h2>Side-by-Side Package Comparison</h2>
+          <p class="muted mx-auto" style="max-width: 600px;">Review detailed deliverables side-by-side to find the optimal balance of coordination, design, and entertainment for her special day.</p>
+        </div>
+
+        <div class="card p-3 p-md-4 reveal shadow-sm overflow-hidden">
+          <div class="table-responsive">
+            <table class="table align-middle text-center mb-0">
+              <caption class="visually-hidden">Comparison of Sparkle, Royal, and Grand Gala event packages</caption>
+              <thead>
+                <tr class="border-bottom">
+                  <th scope="col" class="text-start py-3 fs-6">Service / Deliverable</th>
+                  <th scope="col" class="py-3 fs-6">Sparkle<br><span class="badge bg-secondary-subtle text-reset fw-normal small mt-1">$2,500+</span></th>
+                  <th scope="col" class="py-3 fs-6 table-col-featured">Royal<br><span class="badge-gold fw-normal small mt-1">$5,500+ (Recommended)</span></th>
+                  <th scope="col" class="py-3 fs-6">Grand Gala<br><span class="badge bg-secondary-subtle text-reset fw-normal small mt-1">$9,800+</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-group-header"><th colspan="4" class="text-start bg-soft py-2 px-3 fw-bold small text-pink text-uppercase"><i class="bi bi-calendar2-check me-2"></i>Coordination &amp; Planning</th></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Venue Shortlist &amp; Contract Negotiation</th><td><i class="bi bi-check-circle-fill text-pink fs-5"></i></td><td class="table-col-featured"><i class="bi bi-check-circle-fill text-pink fs-5"></i></td><td><i class="bi bi-check-circle-fill text-pink fs-5"></i></td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Interactive Client Dashboard &amp; Budget Planner</th><td><i class="bi bi-check-circle-fill text-pink fs-5"></i></td><td class="table-col-featured"><i class="bi bi-check-circle-fill text-pink fs-5"></i></td><td><i class="bi bi-check-circle-fill text-pink fs-5"></i></td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">On-Site Day-Of Coordination Team</th><td>1 Lead Coordinator</td><td class="table-col-featured fw-semibold">2 Coordinators</td><td>3+ Senior Director Team</td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Planning Horizon Scope</th><td>2–3 Months</td><td class="table-col-featured">6–9 Months</td><td>12–18 Months</td></tr>
+
+                <tr class="table-group-header"><th colspan="4" class="text-start bg-soft py-2 px-3 fw-bold small text-pink text-uppercase"><i class="bi bi-palette me-2"></i>Styling, Décor &amp; Atmosphere</th></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Centerpieces &amp; Guest Table Styling</th><td>Essential Kit</td><td class="table-col-featured fw-semibold">Signature Florals</td><td>Couture Floral Artistry</td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Custom Floral Arch &amp; Sweetheart Stage</th><td><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td class="table-col-featured"><i class="bi bi-check-circle-fill text-pink me-1"></i> Full Backdrop</td><td><i class="bi bi-check-circle-fill text-pink me-1"></i> Luxury 3D Stage</td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Custom Stationery &amp; Invitation Suite</th><td><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td class="table-col-featured">100 Foil Suites</td><td>200 Custom Acrylic Suites</td></tr>
+
+                <tr class="table-group-header"><th colspan="4" class="text-start bg-soft py-2 px-3 fw-bold small text-pink text-uppercase"><i class="bi bi-music-note-beamed me-2"></i>Entertainment &amp; Media</th></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Bilingual DJ, Bilingual MC &amp; Uplighting</th><td><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td class="table-col-featured"><i class="bi bi-check-circle-fill text-pink me-1"></i> Included</td><td><i class="bi bi-check-circle-fill text-pink me-1"></i> Concert Package</td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Professional Photography</th><td><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td class="table-col-featured fw-semibold">6 Hours + Gallery</td><td>10 Hours + Pre-Shoot</td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">4K Cinema Videography &amp; Drone Highlights</th><td><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td class="table-col-featured"><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td><i class="bi bi-check-circle-fill text-pink me-1"></i> Full Film + Teasers</td></tr>
+
+                <tr class="table-group-header"><th colspan="4" class="text-start bg-soft py-2 px-3 fw-bold small text-pink text-uppercase"><i class="bi bi-award me-2"></i>Traditions, Catering &amp; Rehearsals</th></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Court Waltz &amp; Surprise Dance Coaching</th><td><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td class="table-col-featured">Timeline Guidance</td><td><i class="bi bi-check-circle-fill text-pink me-1"></i> 4 Studio Sessions</td></tr>
+                <tr><th scope="row" class="text-start ps-3 fw-normal">Multi-Tier Designer Cake &amp; Dessert Station</th><td><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td class="table-col-featured"><span class="badge bg-secondary-subtle text-muted fw-normal px-2 py-1"><i class="bi bi-dash-circle me-1"></i>Not Included</span></td><td><i class="bi bi-check-circle-fill text-pink me-1"></i> Included</td></tr>
+              </tbody>
+              <tfoot>
+                <tr class="border-top">
+                  <th scope="row" class="text-start py-3 ps-3">Reserve Package</th>
+                  <td class="py-3"><button class="btn btn-outline-brand btn-sm" type="button" data-pkg="Sparkle">Select Sparkle</button></td>
+                  <td class="py-3 table-col-featured"><button class="btn btn-brand btn-sm shadow-sm" type="button" data-pkg="Royal">Select Royal</button></td>
+                  <td class="py-3"><button class="btn btn-outline-brand btn-sm" type="button" data-pkg="Grand Gala">Select Grand Gala</button></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Planning Guarantees & Peace of Mind -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2"><i class="bi bi-shield-check me-1"></i>Our Service Commitment</span>
+          <h2>The Fiesta Rosa Planning Guarantee</h2>
+          <p class="muted mx-auto" style="max-width: 600px;">Every celebration is backed by transparent agreements, bilingual execution, and seasoned event directors.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="card h-100 p-4 text-center lift border">
+              <div class="avatar-feature bg-soft text-pink mx-auto mb-3 d-flex align-items-center justify-content-center fs-3" style="width: 64px; height: 64px;">
+                <i class="bi bi-translate"></i>
+              </div>
+              <h3 class="h5 mb-2">100% Bilingual Execution</h3>
+              <p class="muted small mb-0">Our coordinators communicate fluently in English and Spanish across all vendor negotiations, rehearsals, and family announcements.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal">
+            <div class="card h-100 p-4 text-center lift border border-gold-premium">
+              <div class="avatar-feature bg-gold-subtle text-gold mx-auto mb-3 d-flex align-items-center justify-content-center fs-3" style="width: 64px; height: 64px;">
+                <i class="bi bi-receipt-cutoff"></i>
+              </div>
+              <h3 class="h5 mb-2">Transparent Guaranteed Pricing</h3>
+              <p class="muted small mb-0">Zero hidden markups, zero unannounced service fees. All line items, overtime rates, and payment milestone dates are fully itemized in writing.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal">
+            <div class="card h-100 p-4 text-center lift border">
+              <div class="avatar-feature bg-soft text-pink mx-auto mb-3 d-flex align-items-center justify-content-center fs-3" style="width: 64px; height: 64px;">
+                <i class="bi bi-person-check-fill"></i>
+              </div>
+              <h3 class="h5 mb-2">Dedicated Lead Director</h3>
+              <p class="muted small mb-0">You work with one primary certified planner from your very first vision consultation all the way through the final song of the celebration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Booking Call to Action -->
+    <section class="section alt">
+      <div class="container">
+        <div class="card p-4 p-md-5 text-center reveal border-gold shadow-sm bg-gradient-soft">
+          <div class="mb-3">
+            <span class="badge-gold"><i class="bi bi-calendar2-heart me-1"></i>Complimentary Vision Session</span>
+          </div>
+          <h2 class="mb-3">Ready to Start Planning Her Milestone Celebration?</h2>
+          <p class="muted mx-auto mb-4" style="max-width: 640px;">
+            Tell us her favorite colors, guest count, and family traditions. Our senior bilingual planners will craft a tailored roadmap and transparent proposal with zero obligation.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a class="btn btn-brand btn-lg" href="contact.html#booking"><i class="bi bi-calendar-event me-2"></i>Book a Consultation</a>
+            <a class="btn btn-outline-brand btn-lg" href="services.html"><i class="bi bi-grid me-2"></i>Explore Individual Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 pb-4">
+        <!-- Column 1 – Brand -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a class="brand d-inline-flex mb-3" href="index.html" aria-label="Fiesta Rosa Events Home">
+            <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+            <span class="brand-text">Fiesta<em>Rosa</em></span>
+          </a>
+          <p class="footer-desc mb-3">
+            South Florida’s premier couture Quinceañera and Sweet Sixteen planning studio. Designing breathtaking milestones where sacred family traditions blend seamlessly with modern luxury.
+          </p>
+          <div class="footer-social d-flex flex-wrap gap-2" aria-label="Official Social Media Links">
+            <a class="soc" href="https://instagram.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Instagram profile" title="Follow Fiesta Rosa on Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://facebook.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Facebook page" title="Follow Fiesta Rosa on Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://pinterest.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Pinterest boards" title="Browse celebration themes on Pinterest">
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://youtube.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official YouTube channel" title="Watch event cinematic films on YouTube">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://tiktok.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official TikTok profile" title="Follow behind the scenes on TikTok">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 – Quick Links -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Quick Links</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="index.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Services</a></li>
+            <li><a href="packages.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Packages</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 – Customer Support -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Customer Support</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Contact Us</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Client Portal</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Login</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Register</a></li>
+            <li><a href="contact.html#faqs"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 – Contact Information -->
+        <div class="col-lg-4 col-md-12">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Contact Information</h2>
+          <ul class="list-unstyled footer-contact d-grid gap-2 mb-4">
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-envelope-heart"></i></span>
+              <div><strong class="contact-label">Email:</strong> <a href="mailto:hello@fiestarosa.example" class="text-reset text-decoration-none">hello@fiestarosa.example</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-telephone-outbound"></i></span>
+              <div><strong class="contact-label">Phone:</strong> <a href="tel:+919876543210" class="text-reset text-decoration-none">+91 98765 43210</a> / +1 (555) 123-4567</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <div><strong class="contact-label">Address:</strong> 123 Celebration Ave, Coral Gables, Miami, FL 33134</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-clock"></i></span>
+              <div><strong class="contact-label">Hours:</strong> Mon – Sat: 9:00 AM – 7:00 PM | Sun: By Appointment</div>
+            </li>
+          </ul>
+          <!-- Newsletter Quick Signup (Unified Pill Input Group) -->
+          <form id="newsletter" data-validate novalidate class="footer-newsletter">
+            <div class="footer-input-group">
+              <label class="visually-hidden" for="nl">Subscribe for celebration tips</label>
+              <input id="nl" class="form-control" type="email" placeholder="Your email address" required>
+              <button class="btn btn-brand" type="submit">Subscribe</button>
+            </div>
+            <p class="form-ok small mt-2" role="status" hidden>Thanks for subscribing to our celebration guide! 🎉</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Full-Width Divider -->
+      <hr class="footer-divider my-3">
+
+      <!-- Balanced Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center py-2 gap-2 small">
+        <p class="mb-0 copy-text opacity-75">
+          © 2026 Fiesta Rosa Events. All rights reserved. Quinceañera &amp; Sweet Sixteen Event Planners.
+        </p>
+        <div class="footer-legal d-flex flex-wrap gap-3 opacity-75">
+          <a href="about.html#values" class="text-decoration-none">Privacy Policy</a>
+          <span>·</span>
+          <a href="packages.html#compare" class="text-decoration-none">Terms of Service</a>
+          <span>·</span>
+          <a href="dashboard.html" class="text-decoration-none">Planning Portal (Demo)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Scroll to top" hidden>↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Gallery | Fiesta Rosa Events</title>
+  <meta name="description" content="Browse Fiesta Rosa's portfolio gallery of Quinceañera, Sweet Sixteen, and luxury floral décor celebrations with real photography and lightbox previews.">
+  <link rel="icon" href="assets/img/icons/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=4">
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico?v=4">
+  <link id="bsCss" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script>
+    (function () {
+      var d = localStorage.getItem('dir') || 'ltr';
+      var t = localStorage.getItem('theme') || 'light';
+      var h = document.documentElement;
+      h.dir = d;
+      h.dataset.theme = t;
+      h.dataset.bsTheme = t;
+      h.classList.add('js');
+      if (d === 'rtl') {
+        var l = document.getElementById('bsCss');
+        if (l) l.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==================== SITE HEADER & NAVIGATION ==================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" id="brand" href="index.html" aria-label="Fiesta Rosa Events Home">
+          <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+          <span class="brand-text">Fiesta<em>Rosa</em></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto gap-lg-1 gap-xl-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-stars me-2 text-pink"></i>Celebrations</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-gem me-2 text-pink"></i>Signature Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link active" href="portfolio.html" aria-current="page">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <div class="header-actions d-flex align-items-center flex-nowrap gap-2 py-2 py-lg-0">
+            <button id="themeBtn" class="btn btn-icon theme-btn" type="button" aria-label="Toggle light and dark theme">🌙</button>
+            <button id="dirBtn" class="btn btn-icon dir-btn" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+            <div class="dropdown auth-dropdown d-inline-flex align-items-center">
+              <a class="btn btn-outline-brand d-inline-flex align-items-center gap-1" href="login.html" id="authSignInBtn">
+                <i class="bi bi-person-circle"></i>
+                <span id="authBtnLabel">Sign In</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow" id="authDropdownMenu" aria-labelledby="authSignInBtn"></ul>
+            </div>
+            <a class="btn btn-brand" href="contact.html#booking">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main">
+    <!-- 1. Centered Hero Banner (Unique Hero Photo #7) -->
+    <section class="hero hero-portfolio" style="background-image: url('assets/img/hero/portfolio.jpg');" role="img" aria-label="Grand celebration hall with celebratory lights and gala ballroom">
+      <div class="container hero-inner reveal">
+        <h1 class="mb-3">Celebration Portfolio Gallery</h1>
+        <p class="lead mb-4">Filter by celebration category, click any image to inspect in high resolution, or tap ♡ to save inspiration to your Client Dashboard.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a class="btn btn-brand btn-lg" href="#gallery">Explore Gallery</a>
+          <a class="btn btn-light btn-lg" href="contact.html#booking">Plan Your Production</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Portfolio Gallery Grid (18 Unique High-Resolution Productions) -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <span class="badge-gold mb-2" id="galleryCount">Showing 18 celebrations</span>
+          <h2>Past Quinceañeras &amp; Sweet Sixteens</h2>
+          <p class="muted">Every event is custom-built around our guest of honor’s personality and family heritage.</p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" role="group" aria-label="Filter portfolio gallery by category">
+          <button class="btn btn-chip active" type="button" data-filter="all">All Celebrations (18)</button>
+          <button class="btn btn-chip" type="button" data-filter="quince">Quinceañera (3)</button>
+          <button class="btn btn-chip" type="button" data-filter="sweet16">Sweet Sixteen (3)</button>
+          <button class="btn btn-chip" type="button" data-filter="decorations">Decorations (3)</button>
+          <button class="btn btn-chip" type="button" data-filter="venues">Venues (3)</button>
+          <button class="btn btn-chip" type="button" data-filter="cakes">Cakes &amp; Desserts (3)</button>
+          <button class="btn btn-chip" type="button" data-filter="florals">Floral Styling (3)</button>
+        </div>
+
+        <!-- Gallery Grid (18 Items Across 6 Categories) -->
+        <div class="row g-4" id="gallery">
+          <!-- Item 1: Quinceañera 1 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="quince">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Enchanted Garden Quince.jpg" data-title="Enchanted Garden Quinceañera Celebration" data-desc="Fairytale outdoor celebration archway dressed in cascading wisteria, pink garden roses, glowing lanterns, and romantic candlelit woodland pathways.">
+                <img src="assets/img/Enchanted Garden Quince.jpg" alt="Enchanted garden Quinceañera celebration arch with glowing lanterns and cascading roses" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Quinceañera</span>
+                  <h3 class="h6 mb-0">Enchanted Garden Quinceañera</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g1" data-title="Enchanted Garden Quinceañera" data-src="assets/img/Enchanted Garden Quince.jpg" aria-pressed="false" aria-label="Save Enchanted Garden Quinceañera to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Quinceañera 2 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="quince">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Royal Court Entrance.jpg" data-title="Palatial Grand Ballroom Quinceañera Reception" data-desc="Opulent royal palace ballroom featuring gilded vaulted ceilings, crystal chandeliers, polished marble reflection floors, and dual grand staircases.">
+                <img src="assets/img/Royal Court Entrance.jpg" alt="Palatial grand ballroom with crystal chandeliers, marble floors, and gilded vaulted ceilings" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Quinceañera</span>
+                  <h3 class="h6 mb-0">Palatial Grand Ballroom</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g2" data-title="Palatial Grand Ballroom" data-src="assets/img/Royal Court Entrance.jpg" aria-pressed="false" aria-label="Save Palatial Grand Ballroom to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Quinceañera 3 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="quince">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Butterfly Dream.jpg" data-title="Enchanted Butterfly Dream Quinceañera" data-desc="Magical fantasy celebration theme featuring glowing sapphire morpho butterflies, luminous violet lotus blossoms, and ambient starry lighting.">
+                <img src="assets/img/Butterfly Dream.jpg" alt="Enchanted butterfly dream celebration with sapphire morpho butterfly on luminous lotus flowers" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Quinceañera</span>
+                  <h3 class="h6 mb-0">Enchanted Butterfly Theme</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g3" data-title="Enchanted Butterfly Theme" data-src="assets/img/Butterfly Dream.jpg" aria-pressed="false" aria-label="Save Enchanted Butterfly Theme to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Sweet Sixteen 1 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="sweet16">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Rose Gold Sweet 16.jpg" data-title="Blush &amp; Rose Gold Stage Decoration" data-desc="Bespoke royal stage design with draped blush pink silk curtains, ornate sweetheart loveseat sofa, crystal chandelier, and dense fresh rose runners.">
+                <img src="assets/img/Rose Gold Sweet 16.jpg" alt="Elegant pink and rose gold stage decoration with floral runner and sweetheart loveseat" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Sweet Sixteen</span>
+                  <h3 class="h6 mb-0">Elegant Stage Decoration</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g4" data-title="Elegant Stage Decoration" data-src="assets/img/Rose Gold Sweet 16.jpg" aria-pressed="false" aria-label="Save Elegant Stage Decoration to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Sweet Sixteen 2 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="sweet16">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Midnight Masquerade.jpg" data-title="Midnight Masquerade Sweet Sixteen Gala" data-desc="Dramatic gothic-glam ballroom production with candlelit crystal chandeliers, low-lying theatrical fog, ceiling swags, and formal evening masquerade styling.">
+                <img src="assets/img/Midnight Masquerade.jpg" alt="Midnight masquerade Sweet Sixteen gala with atmospheric fog and crystal candelabras" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Sweet Sixteen</span>
+                  <h3 class="h6 mb-0">Midnight Masquerade Gala</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g5" data-title="Midnight Masquerade Gala" data-src="assets/img/Midnight Masquerade.jpg" aria-pressed="false" aria-label="Save Midnight Masquerade Gala to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Sweet Sixteen 3 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="sweet16">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Neon Glam 16.jpg" data-title="Neon Poolside Sweet Sixteen Party" data-desc="High-energy Sweet Sixteen poolside celebration with overhead aluminum DJ truss, disco mirror ball, illuminated pool deck, and VIP cabana seating.">
+                <img src="assets/img/Neon Glam 16.jpg" alt="High-energy neon poolside Sweet Sixteen party with DJ truss, disco ball, and illuminated pool" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Sweet Sixteen</span>
+                  <h3 class="h6 mb-0">Sweet Sixteen Party</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g6" data-title="Sweet Sixteen Party" data-src="assets/img/Neon Glam 16.jpg" aria-pressed="false" aria-label="Save Sweet Sixteen Party to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7: Decorations 1 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="decorations">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Pastel Balloon Sculpture.jpg" data-title="Modern Pastel Balloon &amp; Floral Backdrop" data-desc="Bespoke balloon artistry featuring sculpted pastel flower clusters, fresh floral accents, and dried palms framing a modern backlit circular halo backdrop.">
+                <img src="assets/img/Pastel Balloon Sculpture.jpg" alt="Modern pastel flower-shaped balloon sculpture and illuminated circular arch backdrop" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Decorations</span>
+                  <h3 class="h6 mb-0">Pastel Balloon Sculpture</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g7" data-title="Pastel Balloon Sculpture" data-src="assets/img/Pastel Balloon Sculpture.jpg" aria-pressed="false" aria-label="Save Pastel Balloon Sculpture to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8: Decorations 2 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="decorations">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Candlelit Tablescape.jpg" data-title="Luxury Candlelit Reception Setup" data-desc="Warm candlelit banquet reception featuring tall glass hurricane candles, burgundy velvet runners, rich floral arrangements, and hanging glass candle orbs.">
+                <img src="assets/img/Candlelit Tablescape.jpg" alt="Luxury candlelit reception setup with glass hurricane candles, burgundy velvet, and hanging candle orbs" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Decorations</span>
+                  <h3 class="h6 mb-0">Luxury Reception Setup</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g8" data-title="Luxury Reception Setup" data-src="assets/img/Candlelit Tablescape.jpg" aria-pressed="false" aria-label="Save Luxury Reception Setup to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9: Decorations 3 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="decorations">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Sweetheart Throne Stage.jpg" data-title="Royal Sweetheart Throne Stage Setup" data-desc="Grand milestone sweetheart stage featuring gold-trimmed white tufted throne chairs, full circular floral ring arch, floating candles, and illuminated acrylic table.">
+                <img src="assets/img/Sweetheart Throne Stage.jpg" alt="Royal sweetheart throne stage with white tufted chairs, circular floral ring, and floating candles" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Decorations</span>
+                  <h3 class="h6 mb-0">Royal Throne Stage Setup</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g9" data-title="Royal Throne Stage Setup" data-src="assets/img/Sweetheart Throne Stage.jpg" aria-pressed="false" aria-label="Save Royal Throne Stage Setup to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10: Venues 1 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="venues">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Royal Historic Ballroom.jpg" data-title="Historic Grand Ballroom &amp; Rotunda Stage" data-desc="Renaissance-inspired ballroom featuring a raised circular performance rotunda, concert grand piano, ornate coffered ceilings, and crystal chandeliers.">
+                <img src="assets/img/Royal Historic Ballroom.jpg" alt="Historic grand ballroom venue with circular performance stage, grand piano, and crystal chandeliers" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Venues</span>
+                  <h3 class="h6 mb-0">Historic Grand Ballroom</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g10" data-title="Historic Grand Ballroom" data-src="assets/img/Royal Historic Ballroom.jpg" aria-pressed="false" aria-label="Save Historic Grand Ballroom to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11: Venues 2 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="venues">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Glasshouse Pavilion.jpg" data-title="Botanical Glasshouse Conservatory Venue" data-desc="Panoramic all-glass conservatory pavilion overlooking mountain twilight vistas, featuring warm interior chandeliers, fairy lights, and candlelit terrace steps.">
+                <img src="assets/img/Glasshouse Pavilion.jpg" alt="Modern glasshouse conservatory pavilion illuminated at twilight with candlelit garden steps" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Venues</span>
+                  <h3 class="h6 mb-0">Modern Glasshouse Pavilion</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g11" data-title="Modern Glasshouse Pavilion" data-src="assets/img/Glasshouse Pavilion.jpg" aria-pressed="false" aria-label="Save Modern Glasshouse Pavilion to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12: Venues 3 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="venues">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Palatial Banquet Estate.jpg" data-title="Palatial Banquet Estate Reception Hall" data-desc="Monumental palace reception hall featuring gilded architectural filigree, wraparound mezzanine balconies, and elegant circular dining tables for royal galas.">
+                <img src="assets/img/Palatial Banquet Estate.jpg" alt="High-angle view of palatial gilded banquet hall with mezzanine balconies and circular gala tables" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Venues</span>
+                  <h3 class="h6 mb-0">Palatial Banquet Estate</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g12" data-title="Palatial Banquet Estate" data-src="assets/img/Palatial Banquet Estate.jpg" aria-pressed="false" aria-label="Save Palatial Banquet Estate to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 13: Cakes & Desserts 1 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="cakes">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/5-Tier Gold Leaf Cake.jpg" data-title="3-Tier Lavender &amp; Gold Leaf Couture Cake" data-desc="Artisan 3-tier celebration cake featuring lavender watercolor fondant, hand-painted gold leaf edges, and a diagonal cascade of handcrafted sugar roses and peonies.">
+                <img src="assets/img/5-Tier Gold Leaf Cake.jpg" alt="Three-tier ivory celebration cake with lavender watercolor, gold leaf rims, and sugar flower cascade" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Cakes &amp; Desserts</span>
+                  <h3 class="h6 mb-0">3-Tier Lavender Floral Cake</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g13" data-title="3-Tier Lavender Floral Cake" data-src="assets/img/5-Tier Gold Leaf Cake.jpg" aria-pressed="false" aria-label="Save 3-Tier Lavender Floral Cake to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 14: Cakes & Desserts 2 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="cakes">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/French Macaron Tower.jpg" data-title="Artisan French Macaron Pyramid Tower" data-desc="Pastel French macaron tower crowned with a blush satin ribbon, served on vintage gold-rimmed porcelain beside fresh garden roses and fine tea service.">
+                <img src="assets/img/French Macaron Tower.jpg" alt="Pastel French macaron pyramid tower topped with a satin pink ribbon on vintage porcelain" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Cakes &amp; Desserts</span>
+                  <h3 class="h6 mb-0">French Macaron Tower</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g14" data-title="French Macaron Tower" data-src="assets/img/French Macaron Tower.jpg" aria-pressed="false" aria-label="Save French Macaron Tower to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 15: Cakes & Desserts 3 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="cakes">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Parisian Dessert Bar.jpg" data-title="Haute Cuisine French Dessert Collection" data-desc="French pastry tasting collection featuring berry mille-feuille, lemon meringue tart, champagne sorbet, and Grand Marnier soufflé served with custom menu cards.">
+                <img src="assets/img/Parisian Dessert Bar.jpg" alt="Gourmet French dessert collection featuring berry mille-feuille, lemon tart, and champagne sorbet" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Cakes &amp; Desserts</span>
+                  <h3 class="h6 mb-0">Gourmet French Dessert Bar</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g15" data-title="Gourmet French Dessert Bar" data-src="assets/img/Parisian Dessert Bar.jpg" aria-pressed="false" aria-label="Save Gourmet French Dessert Bar to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 16: Floral Styling 1 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="florals">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Floral Moon Archway.jpg" data-title="Rooftop Crescent Moon Floral Design" data-desc="Dramatic rooftop ceremony design featuring a gilded circular crescent moon arch filled with terracotta, crimson, and powder-blue roses overlooking the waterfront.">
+                <img src="assets/img/Floral Moon Archway.jpg" alt="Gilded circular crescent moon floral arch with terracotta and blue roses on a rooftop terrace" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Floral Styling</span>
+                  <h3 class="h6 mb-0">Floral Event Design</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g16" data-title="Floral Event Design" data-src="assets/img/Floral Moon Archway.jpg" aria-pressed="false" aria-label="Save Floral Event Design to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 17: Floral Styling 2 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="florals">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Rose &amp; Peony Wall.jpg" data-title="Chic Birthday Celebration &amp; Floral Design" data-desc="Modern milestone celebration featuring a lush hot pink floral table runner, custom arch backdrops, and a signature vintage pink telephone booth photo-op.">
+                <img src="assets/img/Rose &amp; Peony Wall.jpg" alt="Milestone birthday celebration room with pink floral runner, modern arched backdrop, and pink telephone booth" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Floral Styling</span>
+                  <h3 class="h6 mb-0">Birthday Celebration Design</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g17" data-title="Birthday Celebration Design" data-src="assets/img/Rose &amp; Peony Wall.jpg" aria-pressed="false" aria-label="Save Birthday Celebration Design to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 18: Floral Styling 3 -->
+          <div class="col-md-6 col-lg-4 g-item" data-cat="florals">
+            <div class="card overflow-hidden lift h-100">
+              <button class="g-btn" type="button" data-img="assets/img/Candelabra Centerpiece.jpg" data-title="Floating Candle &amp; Burgundy Floral Design" data-desc="Elegant low table centerpiece featuring floating candles in glass cylinders set within a brass tray ring of deep burgundy dahlias, blush roses, and seeded eucalyptus.">
+                <img src="assets/img/Candelabra Centerpiece.jpg" alt="Brass tray table centerpiece with floating candles in glass cylinders, burgundy dahlias, and eucalyptus" loading="lazy" width="800" height="600">
+              </button>
+              <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge-gold mb-1">Floral Styling</span>
+                  <h3 class="h6 mb-0">Floating Candle Centerpiece</h3>
+                </div>
+                <button class="btn btn-icon fav" type="button" data-fav="g18" data-title="Floating Candle Centerpiece" data-src="assets/img/Candelabra Centerpiece.jpg" aria-pressed="false" aria-label="Save Floating Candle Centerpiece to favorites">♡</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Image Preview Lightbox Modal -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content overflow-hidden">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="imgTitle">Celebration Preview</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close preview"></button>
+          </div>
+          <div class="modal-body p-0">
+            <img id="imgBig" src="" alt="" class="w-100" style="max-height: 75vh; object-fit: contain; background: #000;">
+            <p id="imgDesc" class="p-3 mb-0 muted small"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Booking Call to Action -->
+    <section class="section alt">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <span class="badge-gold mb-2">Start Your Journey</span>
+          <h2>Inspired by Our Real Celebrations?</h2>
+          <p class="muted mx-auto" style="max-width: 620px;">
+            Tell us your dream theme, guest count, and traditions—our bilingual planners will craft a stress-free roadmap tailored to your family.
+          </p>
+        </div>
+        <div class="text-center reveal">
+          <a class="btn btn-brand btn-lg me-2 mb-2" href="contact.html#booking">Book a Consultation</a>
+          <a class="btn btn-outline-brand btn-lg mb-2" href="packages.html">Explore Packages</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 pb-4">
+        <!-- Column 1 – Brand -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a class="brand d-inline-flex mb-3" href="index.html" aria-label="Fiesta Rosa Events Home">
+            <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+            <span class="brand-text">Fiesta<em>Rosa</em></span>
+          </a>
+          <p class="footer-desc mb-3">
+            South Florida’s premier couture Quinceañera and Sweet Sixteen planning studio. Designing breathtaking milestones where sacred family traditions blend seamlessly with modern luxury.
+          </p>
+          <div class="footer-social d-flex flex-wrap gap-2" aria-label="Official Social Media Links">
+            <a class="soc" href="https://instagram.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Instagram profile" title="Follow Fiesta Rosa on Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://facebook.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Facebook page" title="Follow Fiesta Rosa on Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://pinterest.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Pinterest boards" title="Browse celebration themes on Pinterest">
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://youtube.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official YouTube channel" title="Watch event cinematic films on YouTube">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://tiktok.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official TikTok profile" title="Follow behind the scenes on TikTok">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 – Quick Links -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Quick Links</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="index.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Services</a></li>
+            <li><a href="packages.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Packages</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 – Customer Support -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Customer Support</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Contact Us</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Client Portal</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Login</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Register</a></li>
+            <li><a href="contact.html#faqs"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 – Contact Information -->
+        <div class="col-lg-4 col-md-12">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Contact Information</h2>
+          <ul class="list-unstyled footer-contact d-grid gap-2 mb-4">
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-envelope-heart"></i></span>
+              <div><strong class="contact-label">Email:</strong> <a href="mailto:hello@fiestarosa.example" class="text-reset text-decoration-none">hello@fiestarosa.example</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-telephone-outbound"></i></span>
+              <div><strong class="contact-label">Phone:</strong> <a href="tel:+919876543210" class="text-reset text-decoration-none">+91 98765 43210</a> / +1 (555) 123-4567</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <div><strong class="contact-label">Address:</strong> 123 Celebration Ave, Coral Gables, Miami, FL 33134</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-clock"></i></span>
+              <div><strong class="contact-label">Hours:</strong> Mon – Sat: 9:00 AM – 7:00 PM | Sun: By Appointment</div>
+            </li>
+          </ul>
+          <!-- Newsletter Quick Signup (Unified Pill Input Group) -->
+          <form id="newsletter" data-validate novalidate class="footer-newsletter">
+            <div class="footer-input-group">
+              <label class="visually-hidden" for="nl">Subscribe for celebration tips</label>
+              <input id="nl" class="form-control" type="email" placeholder="Your email address" required>
+              <button class="btn btn-brand" type="submit">Subscribe</button>
+            </div>
+            <p class="form-ok small mt-2" role="status" hidden>Thanks for subscribing to our celebration guide! 🎉</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Full-Width Divider -->
+      <hr class="footer-divider my-3">
+
+      <!-- Balanced Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center py-2 gap-2 small">
+        <p class="mb-0 copy-text opacity-75">
+          © 2026 Fiesta Rosa Events. All rights reserved. Quinceañera &amp; Sweet Sixteen Event Planners.
+        </p>
+        <div class="footer-legal d-flex flex-wrap gap-3 opacity-75">
+          <a href="about.html#values" class="text-decoration-none">Privacy Policy</a>
+          <span>·</span>
+          <a href="packages.html#compare" class="text-decoration-none">Terms of Service</a>
+          <span>·</span>
+          <a href="dashboard.html" class="text-decoration-none">Planning Portal (Demo)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Scroll to top" hidden>↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

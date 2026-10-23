@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us &amp; Book a Consultation | Fiesta Rosa Events</title>
+  <meta name="description" content="Contact Fiesta Rosa Events to schedule a Quinceañera or Sweet Sixteen planning consultation. Includes phone, email, studio address, validated form, and interactive map.">
+  <link rel="icon" href="assets/img/icons/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=4">
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico?v=4">
+  <link id="bsCss" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script>
+    (function () {
+      var d = localStorage.getItem('dir') || 'ltr';
+      var t = localStorage.getItem('theme') || 'light';
+      var h = document.documentElement;
+      h.dir = d;
+      h.dataset.theme = t;
+      h.dataset.bsTheme = t;
+      h.classList.add('js');
+      if (d === 'rtl') {
+        var l = document.getElementById('bsCss');
+        if (l) l.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==================== SITE HEADER & NAVIGATION ==================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" id="brand" href="index.html" aria-label="Fiesta Rosa Events Home">
+          <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+          <span class="brand-text">Fiesta<em>Rosa</em></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto gap-lg-1 gap-xl-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-stars me-2 text-pink"></i>Celebrations</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-gem me-2 text-pink"></i>Signature Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <div class="header-actions d-flex align-items-center flex-nowrap gap-2 py-2 py-lg-0">
+            <button id="themeBtn" class="btn btn-icon theme-btn" type="button" aria-label="Toggle light and dark theme">🌙</button>
+            <button id="dirBtn" class="btn btn-icon dir-btn" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+            <div class="dropdown auth-dropdown d-inline-flex align-items-center">
+              <a class="btn btn-outline-brand d-inline-flex align-items-center gap-1" href="login.html" id="authSignInBtn">
+                <i class="bi bi-person-circle"></i>
+                <span id="authBtnLabel">Sign In</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow" id="authDropdownMenu" aria-labelledby="authSignInBtn"></ul>
+            </div>
+            <a class="btn btn-brand" href="contact.html#booking">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main">
+    <!-- 1. Centered Hero Banner (Unique Hero Photo #10) -->
+    <section class="hero hero-contact" style="background-image: url('assets/img/hero/contact.jpg');" role="img" aria-label="Luxurious grand ballroom celebration venue with crystal chandeliers and gold banquet decor">
+      <div class="container hero-inner reveal">
+        <h1 class="mb-3">Let’s Plan Together</h1>
+        <p class="lead mb-4">Tell us about your daughter’s celebration—our bilingual planning directors respond within one business day with a customized theme proposal.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a class="btn btn-brand btn-lg" href="#booking">Book a Consultation</a>
+          <a class="btn btn-light btn-lg" href="#studioInfo">Studio Hours &amp; Location</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Consultation Form & Studio Map Section -->
+    <section class="section" id="booking">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Consultation Form with Strict Validation -->
+          <div class="col-lg-7 reveal">
+            <div class="card p-4 p-lg-5">
+              <span class="badge-gold mb-2 align-self-start">Inquiry Form</span>
+              <h2 class="mb-2">Book a Planning Consultation</h2>
+              <p class="muted mb-4">All fields marked with * are required. Validated in real time in your browser.</p>
+
+              <form id="contact" data-validate novalidate>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label" for="cname">Parent / Guardian Full Name *</label>
+                    <input class="form-control" id="cname" name="cname" type="text" placeholder="Elena Hernández" required autocomplete="name" data-type="name" minlength="2">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label" for="cemail">Email Address *</label>
+                    <input class="form-control" id="cemail" name="cemail" type="email" placeholder="elena@family.com" required autocomplete="email">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label" for="cphone">Phone Number (10 Digits) *</label>
+                    <input class="form-control" id="cphone" name="cphone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" minlength="10" placeholder="9876543210" required data-type="phone" autocomplete="tel">
+                    <small class="muted">Configured for Indian 10-digit format (e.g. 9876543210)</small>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label" for="etype">Celebration Type *</label>
+                    <select class="form-select" id="etype" name="etype" required>
+                      <option value="">Choose celebration type…</option>
+                      <option value="Quinceañera">Quinceañera</option>
+                      <option value="Sweet Sixteen">Sweet Sixteen</option>
+                      <option value="Combined Milestone Gala">Combined Milestone Gala</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label" for="csubject">Subject / Inquiry Type *</label>
+                    <input class="form-control" id="csubject" name="csubject" type="text" placeholder="Ballroom Gala &amp; Floral Styling" required data-type="subject">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label" for="cguests">Estimated Guest Count</label>
+                    <select class="form-select" id="cguests" name="cguests">
+                      <option value="50-100">50 – 100 Guests</option>
+                      <option value="100-175" selected>100 – 175 Guests</option>
+                      <option value="175-250">175 – 250 Guests</option>
+                      <option value="250+">250+ Guests</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="cmsg">Tell Us About Her Dream Celebration (Min 10 Chars) *</label>
+                  <textarea class="form-control" id="cmsg" name="cmsg" rows="4" placeholder="Share her favorite colors, ballroom preferences, traditions (shoe change, waltz, 16 candles), or questions…" required data-min-message></textarea>
+                </div>
+                <button class="btn btn-brand btn-lg w-100" type="submit">Send Consultation Request</button>
+              </form>
+
+              <div class="alert alert-success form-ok mt-3 mb-0" role="status" hidden>
+                🎉 Thank you! Your consultation request has been received (front-end demo). A Fiesta Rosa bilingual planner will contact you within 24 hours.
+              </div>
+            </div>
+          </div>
+
+          <!-- Studio Contact Details & Interactive Map -->
+          <div class="col-lg-5 reveal" id="studioInfo">
+            <div class="card p-4 mb-4">
+              <span class="badge-gold mb-2 align-self-start">Studio Location</span>
+              <h2 class="h4 mb-3">Visit or Call Our Studio</h2>
+              <ul class="list-unstyled d-grid gap-3 mb-0">
+                <li>
+                  <strong>📞 Phone:</strong><br>
+                  <a href="tel:+919876543210">+91 98765 43210</a> (Direct Support) / <a href="tel:+15551234567">+1 (555) 123-4567</a> (Studio Desk)
+                </li>
+                <li>
+                  <strong>✉️ Email:</strong><br>
+                  <a href="mailto:hello@fiestarosa.example">hello@fiestarosa.example</a>
+                </li>
+                <li>
+                  <strong>📍 Design Studio:</strong><br>
+                  123 Celebration Ave, Suite 400, Coral Gables, Miami, FL 33134
+                  <div class="mt-1">
+                    <a href="https://maps.google.com/?q=Coral+Gables,+FL+33134" target="_blank" rel="noopener noreferrer" class="small fw-semibold text-pink">
+                      <i class="bi bi-geo-alt-fill me-1"></i>Open in Official Google Maps
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <strong>🕘 Business Hours:</strong><br>
+                  Mon–Sat: 9:00 AM – 6:30 PM (Evening ballroom tours by appointment)
+                </li>
+              </ul>
+            </div>
+
+            <div class="map-wrap">
+              <iframe
+                title="Official Google Map showing Fiesta Rosa Events Studio in Coral Gables, Miami"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57493.58579482935!2d-80.3086968032709!3d25.74864386990422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b794101e13cf%3A0xcb1b601f0fa2f444!2sCoral%20Gables%2C%20FL%2033134%2C%20USA!5e0!3m2!1sen!2sus!4v1718000000000!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Consultation FAQs -->
+    <section class="section alt" id="faqs">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">What to Expect</span>
+          <h2>Consultation &amp; Booking FAQs</h2>
+          <p class="muted">Helpful insights on what happens once you submit your inquiry.</p>
+        </div>
+        <div class="accordion mx-auto reveal" id="contactFaq" style="max-width: 820px;">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cf1" aria-expanded="true">
+                Is the initial consultation free of charge?
+              </button>
+            </h3>
+            <div id="cf1" class="accordion-collapse collapse show" data-bs-parent="#contactFaq">
+              <div class="accordion-body">
+                Yes! We offer a complimentary 30-minute vision call (in our Coral Gables design studio or via Zoom). We review your preferred date, guest list, traditions, and target budget.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf2" aria-expanded="false">
+                What information should we prepare before our consultation?
+              </button>
+            </h3>
+            <div id="cf2" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+              <div class="accordion-body">
+                Having an estimated guest count, general season or target month, and a few inspiration photos or favorite colors is ideal. If you already have a venue in mind or booked, bring the contract details!
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cf3" aria-expanded="false">
+                Can grandparents and padrinos attend the consultation?
+              </button>
+            </h3>
+            <div id="cf3" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+              <div class="accordion-body">
+                We warmly welcome parents, grandparents, the guest of honor, and key padrinos. Our team is fully bilingual in English and Spanish, so everyone can participate comfortably.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 pb-4">
+        <!-- Column 1 – Brand -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a class="brand d-inline-flex mb-3" href="index.html" aria-label="Fiesta Rosa Events Home">
+            <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+            <span class="brand-text">Fiesta<em>Rosa</em></span>
+          </a>
+          <p class="footer-desc mb-3">
+            South Florida’s premier couture Quinceañera and Sweet Sixteen planning studio. Designing breathtaking milestones where sacred family traditions blend seamlessly with modern luxury.
+          </p>
+          <div class="footer-social d-flex flex-wrap gap-2" aria-label="Official Social Media Links">
+            <a class="soc" href="https://instagram.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Instagram profile" title="Follow Fiesta Rosa on Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://facebook.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Facebook page" title="Follow Fiesta Rosa on Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://pinterest.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Pinterest boards" title="Browse celebration themes on Pinterest">
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://youtube.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official YouTube channel" title="Watch event cinematic films on YouTube">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://tiktok.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official TikTok profile" title="Follow behind the scenes on TikTok">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 – Quick Links -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Quick Links</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="index.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Services</a></li>
+            <li><a href="packages.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Packages</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 – Customer Support -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Customer Support</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Contact Us</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Client Portal</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Login</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Register</a></li>
+            <li><a href="contact.html#faqs"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 – Contact Information -->
+        <div class="col-lg-4 col-md-12">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Contact Information</h2>
+          <ul class="list-unstyled footer-contact d-grid gap-2 mb-4">
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-envelope-heart"></i></span>
+              <div><strong class="contact-label">Email:</strong> <a href="mailto:hello@fiestarosa.example" class="text-reset text-decoration-none">hello@fiestarosa.example</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-telephone-outbound"></i></span>
+              <div><strong class="contact-label">Phone:</strong> <a href="tel:+919876543210" class="text-reset text-decoration-none">+91 98765 43210</a> / +1 (555) 123-4567</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <div><strong class="contact-label">Address:</strong> 123 Celebration Ave, Coral Gables, Miami, FL 33134</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-clock"></i></span>
+              <div><strong class="contact-label">Hours:</strong> Mon – Sat: 9:00 AM – 7:00 PM | Sun: By Appointment</div>
+            </li>
+          </ul>
+          <!-- Newsletter Quick Signup (Unified Pill Input Group) -->
+          <form id="newsletter" data-validate novalidate class="footer-newsletter">
+            <div class="footer-input-group">
+              <label class="visually-hidden" for="nl">Subscribe for celebration tips</label>
+              <input id="nl" class="form-control" type="email" placeholder="Your email address" required>
+              <button class="btn btn-brand" type="submit">Subscribe</button>
+            </div>
+            <p class="form-ok small mt-2" role="status" hidden>Thanks for subscribing to our celebration guide! 🎉</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Full-Width Divider -->
+      <hr class="footer-divider my-3">
+
+      <!-- Balanced Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center py-2 gap-2 small">
+        <p class="mb-0 copy-text opacity-75">
+          © 2026 Fiesta Rosa Events. All rights reserved. Quinceañera &amp; Sweet Sixteen Event Planners.
+        </p>
+        <div class="footer-legal d-flex flex-wrap gap-3 opacity-75">
+          <a href="about.html#values" class="text-decoration-none">Privacy Policy</a>
+          <span>·</span>
+          <a href="packages.html#compare" class="text-decoration-none">Terms of Service</a>
+          <span>·</span>
+          <a href="dashboard.html" class="text-decoration-none">Planning Portal (Demo)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Scroll to top" hidden>↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

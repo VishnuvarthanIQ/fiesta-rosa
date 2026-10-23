@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Fiesta Rosa Events</title>
+  <meta name="description" content="Meet the Fiesta Rosa Events team: our story, mission, core values, planning specialists, industry awards, working process, and client testimonials.">
+  <link rel="icon" href="assets/img/icons/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=4">
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico?v=4">
+  <link id="bsCss" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script>
+    (function () {
+      var d = localStorage.getItem('dir') || 'ltr';
+      var t = localStorage.getItem('theme') || 'light';
+      var h = document.documentElement;
+      h.dir = d;
+      h.dataset.theme = t;
+      h.dataset.bsTheme = t;
+      h.classList.add('js');
+      if (d === 'rtl') {
+        var l = document.getElementById('bsCss');
+        if (l) l.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==================== SITE HEADER & NAVIGATION ==================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" id="brand" href="index.html" aria-label="Fiesta Rosa Events Home">
+          <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+          <span class="brand-text">Fiesta<em>Rosa</em></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto gap-lg-1 gap-xl-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-stars me-2 text-pink"></i>Celebrations</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-gem me-2 text-pink"></i>Signature Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link active" href="about.html" aria-current="page">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <div class="header-actions d-flex align-items-center flex-nowrap gap-2 py-2 py-lg-0">
+            <button id="themeBtn" class="btn btn-icon theme-btn" type="button" aria-label="Toggle light and dark theme">🌙</button>
+            <button id="dirBtn" class="btn btn-icon dir-btn" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+            <div class="dropdown auth-dropdown d-inline-flex align-items-center">
+              <a class="btn btn-outline-brand d-inline-flex align-items-center gap-1" href="login.html" id="authSignInBtn">
+                <i class="bi bi-person-circle"></i>
+                <span id="authBtnLabel">Sign In</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow" id="authDropdownMenu" aria-labelledby="authSignInBtn"></ul>
+            </div>
+            <a class="btn btn-brand" href="contact.html#booking">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main">
+    <!-- 1. Centered Hero Banner (Unique Hero Photo #3) -->
+    <section class="hero hero-about" style="background-image: url('assets/img/hero/about.jpg');" role="img" aria-label="Professional event planning team coordinating an elegant gala">
+      <div class="container hero-inner reveal">
+        <h1 class="mb-3">About Fiesta Rosa Events</h1>
+        <p class="lead mb-4">A passionate, bilingual planning studio that treats every Quinceañera and Sweet Sixteen like our own family’s cherished milestone.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a class="btn btn-brand btn-lg" href="contact.html#booking">Meet With Our Planners</a>
+          <a class="btn btn-light btn-lg" href="portfolio.html">View Our Celebrations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Company Story & Mission -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7 reveal">
+            <span class="badge-gold mb-2">Founded in 2012</span>
+            <h2 class="mb-3">From One Family Quinceañera to 500+ Unforgettable Milestones</h2>
+            <p>
+              Fiesta Rosa began in 2012 when founder Camila Reyes planned her niece’s Quinceañera in Coral Gables and realized how rarely families find a planning studio that honors deep cultural traditions while delivering contemporary luxury design.
+            </p>
+            <p>
+              Over the past fourteen years, our studio has grown into a multidisciplinary team of event architects, floral couture stylists, waltz choreography coaches, and bilingual production directors dedicated exclusively to Quinceañera and Sweet Sixteen celebrations.
+            </p>
+            <p class="mb-0">
+              Whether we are coordinating a cathedral blessing with 14 damas and chambelanes or transforming a modern glass atrium into a Rose Gold Sweet Sixteen lounge, our goal remains unchanged: giving parents complete peace of mind while making the guest of honor feel like royalty.
+            </p>
+          </div>
+          <div class="col-lg-5 reveal">
+            <div class="card p-4 p-lg-5" id="values">
+              <h3 class="h5 mb-3">✨ Our Mission &amp; Core Values</h3>
+              <p class="muted">
+                To make milestone celebrations joyful, deeply personal, and completely stress-free—empowering young women to shine and allowing families to savor every embrace.
+              </p>
+              <ul class="list-unstyled mb-0 d-grid gap-2">
+                <li>✓ <strong>Cultural Reverence:</strong> Honoring every family tradition in English &amp; Español.</li>
+                <li>✓ <strong>Budget Transparency:</strong> Real-time tracking in your family dashboard with zero hidden markups.</li>
+                <li>✓ <strong>Couture Craftsmanship:</strong> Bespoke floral installations, custom stages, and concert-grade lighting.</li>
+                <li>✓ <strong>Curated Vendors:</strong> 120+ insured, five-star regional celebration partners.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Experience, Achievements & Industry Awards -->
+    <section class="section alt">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">Proven Track Record</span>
+          <h2>Fiesta Rosa by the Numbers &amp; Awards</h2>
+          <p class="muted">Fourteen years of excellence orchestrating milestone events across South Florida and beyond.</p>
+        </div>
+        <div class="row text-center g-4 mb-4">
+          <div class="col-6 col-md-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="stat" data-count="500">500</div>
+              <p class="muted mb-0">Celebrations Planned</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="stat" data-count="14">14</div>
+              <p class="muted mb-0">Years of Experience</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="stat" data-count="120">120</div>
+              <p class="muted mb-0">Trusted Vendor Partners</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="stat" data-count="98">98</div>
+              <p class="muted mb-0">% Five-Star Client Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 reveal">
+          <div class="col-md-4">
+            <div class="card p-4 h-100">
+              <span class="badge-gold mb-2 align-self-start">2025 &amp; 2026 Winner</span>
+              <h3 class="h6">🏆 Best Quinceañera &amp; Sweet 16 Studio</h3>
+              <p class="muted small mb-0">Awarded by the South Florida Luxury Event Guild for excellence in bespoke floral &amp; stage production.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 h-100">
+              <span class="badge-gold mb-2 align-self-start">National Feature</span>
+              <h3 class="h6">🌟 Featured in Modern Quince Magazine</h3>
+              <p class="muted small mb-0">Recognized for blending multi-generational heritage ceremonies with contemporary teen lounge aesthetics.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 h-100">
+              <span class="badge-gold mb-2 align-self-start">Certified Guild</span>
+              <h3 class="h6">💎 Certified Bilingual Event Architects</h3>
+              <p class="muted small mb-0">Full liability coverage, CAD ballroom layout certification, and emergency backup vendor guarantees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Planning Team Section (Real Portraits #25-#28) -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">Dedicated Specialists</span>
+          <h2>Meet the Event Planning Team</h2>
+          <p class="muted">The creative directors, floral designers, and logistics experts behind your daughter’s celebration.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="card team-card text-center h-100 lift overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Portrait of Camila Reyes, Founder and Lead Planner" class="card-img-top team-img" loading="lazy" width="600" height="800">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Camila Reyes</h3>
+                <p class="badge-gold mb-2">Founder &amp; Lead Planner</p>
+                <p class="muted small mb-0">14+ years leading luxury Quinceañera productions, church ceremonies, and executive timelines.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="card team-card text-center h-100 lift overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Portrait of Daniel Okafor, Venue and Vendor Director" class="card-img-top team-img" loading="lazy" width="600" height="800">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Daniel Okafor</h3>
+                <p class="badge-gold mb-2">Venue &amp; Vendor Director</p>
+                <p class="muted small mb-0">Architectural floorplan specialist and contract negotiator for 120+ premier regional venues.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="card team-card text-center h-100 lift overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Portrait of Sofía Navarro, Creative and Floral Director" class="card-img-top team-img" loading="lazy" width="600" height="800">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Sofía Navarro</h3>
+                <p class="badge-gold mb-2">Creative &amp; Floral Director</p>
+                <p class="muted small mb-0">Master floral architect behind our signature Enchanted Garden arches and sweetheart throne stages.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="card team-card text-center h-100 lift overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Portrait of Mateo Silva, Entertainment and Choreography Coach" class="card-img-top team-img" loading="lazy" width="600" height="800">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Mateo Silva</h3>
+                <p class="badge-gold mb-2">Entertainment &amp; Vals Coach</p>
+                <p class="muted small mb-0">Bilingual Master of Ceremonies and court waltz choreographer for classical and modern surprise dances.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Working Process Section -->
+    <section class="section alt">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">How We Collaborate</span>
+          <h2>Our 4-Stage Family Working Process</h2>
+          <p class="muted">From the initial vision call to the final confetti drop, every milestone is organized with care.</p>
+        </div>
+        <div class="row g-4 text-center">
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100 lift">
+              <div class="step">1</div>
+              <h3 class="h5">Discovery &amp; Vision</h3>
+              <p class="muted small mb-0">Complimentary consultation to explore her favorite themes, dress colors, guest count, and family traditions.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100 lift">
+              <div class="step">2</div>
+              <h3 class="h5">Venue &amp; Design</h3>
+              <p class="muted small mb-0">Guided site tours, 3D floral mood boards, linen tastings, and vendor contract lock-in via your Client Dashboard.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100 lift">
+              <div class="step">3</div>
+              <h3 class="h5">Rehearsals &amp; Fittings</h3>
+              <p class="muted small mb-0">Court waltz choreography sessions, final gown fittings, bilingual RSVP seating charts, and lighting cues.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100 lift">
+              <div class="step">4</div>
+              <h3 class="h5">Celebration Production</h3>
+              <p class="muted small mb-0">Our on-site directors oversee load-in, ceremony timing, speeches, and entertainment so you enjoy every moment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Client Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">Client Praise</span>
+          <h2>Why Parents Recommend Our Studio</h2>
+          <p class="muted">Real reviews from families who trusted Fiesta Rosa with their milestone celebration.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <figure class="card p-4 h-100 m-0">
+              <blockquote class="mb-3">
+                “Camila and Sofía treated my daughter Isabella like their own niece. When rain threatened our outdoor garden portraits, they had a covered glass conservatory backup ready within twenty minutes!”
+              </blockquote>
+              <figcaption class="d-flex align-items-center gap-2 mt-auto">
+                <img src="assets/img/reviews/review-mendoza.jpg" alt="Gabriela &amp; Andrés Mendoza" class="avatar avatar-photo" width="48" height="48" loading="lazy">
+                <div>
+                  <strong class="d-block">Gabriela &amp; Andrés Mendoza</strong>
+                  <span class="muted small">Quinceañera Parents · Key Biscayne</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-6 reveal">
+            <figure class="card p-4 h-100 m-0">
+              <blockquote class="mb-3">
+                “Mateo’s waltz rehearsals transformed 14 nervous teenagers into a confident royal court. The surprise salsa and hip-hop remix brought all 240 guests to their feet!”
+              </blockquote>
+              <figcaption class="d-flex align-items-center gap-2 mt-auto">
+                <img src="assets/img/reviews/review-castillo.jpg" alt="Carmen &amp; Roberto Castillo" class="avatar avatar-photo" width="48" height="48" loading="lazy">
+                <div>
+                  <strong class="d-block">Carmen &amp; Roberto Castillo</strong>
+                  <span class="muted small">Royal Gala Parents · Coral Gables</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Booking Call to Action -->
+    <section class="section alt">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <span class="badge-gold mb-2">Start Your Journey</span>
+          <h2>Ready to Meet Your Planning Team?</h2>
+          <p class="muted mx-auto" style="max-width: 620px;">
+            Schedule a complimentary consultation in our Coral Gables studio or over video call to begin designing her milestone celebration.
+          </p>
+        </div>
+        <div class="text-center reveal">
+          <a class="btn btn-brand btn-lg me-2 mb-2" href="contact.html#booking">Book a Consultation</a>
+          <a class="btn btn-outline-brand btn-lg mb-2" href="packages.html">Explore Packages</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 pb-4">
+        <!-- Column 1 – Brand -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a class="brand d-inline-flex mb-3" href="index.html" aria-label="Fiesta Rosa Events Home">
+            <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+            <span class="brand-text">Fiesta<em>Rosa</em></span>
+          </a>
+          <p class="footer-desc mb-3">
+            South Florida’s premier couture Quinceañera and Sweet Sixteen planning studio. Designing breathtaking milestones where sacred family traditions blend seamlessly with modern luxury.
+          </p>
+          <div class="footer-social d-flex flex-wrap gap-2" aria-label="Official Social Media Links">
+            <a class="soc" href="https://instagram.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Instagram profile" title="Follow Fiesta Rosa on Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://facebook.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Facebook page" title="Follow Fiesta Rosa on Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://pinterest.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Pinterest boards" title="Browse celebration themes on Pinterest">
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://youtube.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official YouTube channel" title="Watch event cinematic films on YouTube">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://tiktok.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official TikTok profile" title="Follow behind the scenes on TikTok">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 – Quick Links -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Quick Links</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="index.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Services</a></li>
+            <li><a href="packages.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Packages</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 – Customer Support -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Customer Support</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Contact Us</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Client Portal</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Login</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Register</a></li>
+            <li><a href="contact.html#faqs"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 – Contact Information -->
+        <div class="col-lg-4 col-md-12">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Contact Information</h2>
+          <ul class="list-unstyled footer-contact d-grid gap-2 mb-4">
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-envelope-heart"></i></span>
+              <div><strong class="contact-label">Email:</strong> <a href="mailto:hello@fiestarosa.example" class="text-reset text-decoration-none">hello@fiestarosa.example</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-telephone-outbound"></i></span>
+              <div><strong class="contact-label">Phone:</strong> <a href="tel:+919876543210" class="text-reset text-decoration-none">+91 98765 43210</a> / +1 (555) 123-4567</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <div><strong class="contact-label">Address:</strong> 123 Celebration Ave, Coral Gables, Miami, FL 33134</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-clock"></i></span>
+              <div><strong class="contact-label">Hours:</strong> Mon – Sat: 9:00 AM – 7:00 PM | Sun: By Appointment</div>
+            </li>
+          </ul>
+          <!-- Newsletter Quick Signup (Unified Pill Input Group) -->
+          <form id="newsletter" data-validate novalidate class="footer-newsletter">
+            <div class="footer-input-group">
+              <label class="visually-hidden" for="nl">Subscribe for celebration tips</label>
+              <input id="nl" class="form-control" type="email" placeholder="Your email address" required>
+              <button class="btn btn-brand" type="submit">Subscribe</button>
+            </div>
+            <p class="form-ok small mt-2" role="status" hidden>Thanks for subscribing to our celebration guide! 🎉</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Full-Width Divider -->
+      <hr class="footer-divider my-3">
+
+      <!-- Balanced Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center py-2 gap-2 small">
+        <p class="mb-0 copy-text opacity-75">
+          © 2026 Fiesta Rosa Events. All rights reserved. Quinceañera &amp; Sweet Sixteen Event Planners.
+        </p>
+        <div class="footer-legal d-flex flex-wrap gap-3 opacity-75">
+          <a href="about.html#values" class="text-decoration-none">Privacy Policy</a>
+          <span>·</span>
+          <a href="packages.html#compare" class="text-decoration-none">Terms of Service</a>
+          <span>·</span>
+          <a href="dashboard.html" class="text-decoration-none">Planning Portal (Demo)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Scroll to top" hidden>↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

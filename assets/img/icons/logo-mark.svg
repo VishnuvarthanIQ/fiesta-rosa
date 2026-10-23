@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <defs>
+    <!-- Ultra-Vivid Champagne Gold Gradient -->
+    <linearGradient id="frGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="32%" stop-color="#ffd700"/>
+      <stop offset="75%" stop-color="#e69d00"/>
+      <stop offset="100%" stop-color="#ffa000"/>
+    </linearGradient>
+
+    <!-- Rich Magenta Couture Rose Gradient -->
+    <linearGradient id="frRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5983"/>
+      <stop offset="40%" stop-color="#e91e63"/>
+      <stop offset="100%" stop-color="#9c0944"/>
+    </linearGradient>
+
+    <!-- Sparkling Diamond Star Highlight -->
+    <linearGradient id="frSparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffe57f"/>
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="logoShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#2a0833" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#logoShadow)">
+    <!-- Top Diamond Star Sparkle -->
+    <path d="M24 1 Q24.8 4.2 27.2 5 Q24.8 5.8 24 9 Q23.2 5.8 20.8 5 Q23.2 4.2 24 1 Z" fill="url(#frSparkle)"/>
+    <circle cx="24" cy="5" r="0.9" fill="#ffffff"/>
+
+    <!-- Left & Right Diamond Glimmers -->
+    <path d="M5.5 15 Q7 15 7 13.5 Q7 15 8.5 15 Q7 15 7 16.5 Q7 15 5.5 15 Z" fill="url(#frGold)"/>
+    <path d="M39.5 15 Q41 15 41 13.5 Q41 15 42.5 15 Q41 15 41 16.5 Q41 15 39.5 15 Z" fill="url(#frGold)"/>
+
+    <!-- Royal Quinceañera Tiara / Crown -->
+    <path d="M8 22 L11.5 13 L17 19 L24 7 L31 19 L36.5 13 L40 22 Q24 25.5 8 22 Z" fill="url(#frGold)" stroke="#d48800" stroke-width="0.75" stroke-linejoin="round"/>
+    <path d="M8 22 Q24 26 40 22 Q24 23.5 8 22 Z" fill="#ffd700" stroke="#b36b00" stroke-width="0.5"/>
+
+    <!-- Crown Jewels / Pearls atop Peaks -->
+    <circle cx="24" cy="7" r="2.2" fill="#ffffff" stroke="url(#frGold)" stroke-width="0.8"/>
+    <circle cx="11.5" cy="13" r="1.6" fill="#ffffff" stroke="url(#frGold)" stroke-width="0.6"/>
+    <circle cx="36.5" cy="13" r="1.6" fill="#ffffff" stroke="url(#frGold)" stroke-width="0.6"/>
+    <circle cx="17" cy="19" r="1.2" fill="#ffffff"/>
+    <circle cx="31" cy="19" r="1.2" fill="#ffffff"/>
+    <circle cx="24" cy="23.2" r="1" fill="#ffffff"/>
+
+    <!-- Blooming Couture Rose -->
+    <path d="M24 24 C14.5 24 10 30 12.5 39 C14.8 45 19.5 47.5 24 47.5 C28.5 47.5 33.2 45 35.5 39 C38 30 33.5 24 24 24 Z" fill="url(#frRose)" stroke="#800637" stroke-width="0.6"/>
+    <path d="M15 33 C12.5 37.5 17 43.5 22.5 46 C18 43 15.5 38 17.5 32 C19 27 22 25.5 24 25.5 C20 25.5 15 28.5 15 33 Z" fill="#ff77a9" opacity="0.85"/>
+    <path d="M33 33 C35.5 37.5 31 43.5 25.5 46 C30 43 32.5 38 30.5 32 C29 27 26 25.5 24 25.5 C28 25.5 33 28.5 33 33 Z" fill="url(#frRose)"/>
+    <path d="M24 29 C19.5 29 18 33.5 20.8 38.5 C22.5 41.5 26.8 42.5 29.5 39 C32.2 35 30 30.5 26 30.5 C23 30.5 22.2 33 25 34.8 C26.5 35.6 27.2 34.2 26.2 33" fill="none" stroke="url(#frGold)" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="24.8" cy="33.8" r="1.3" fill="#ffffff"/>
+  </g>
+</svg>

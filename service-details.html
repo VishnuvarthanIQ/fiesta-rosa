@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Details, Process &amp; FAQs | Fiesta Rosa Events</title>
+  <meta name="description" content="Detailed service descriptions, benefits, deliverables, step-by-step planning process, pricing tiers, related services, and FAQs for Fiesta Rosa Events.">
+  <link rel="icon" href="assets/img/icons/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=4">
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico?v=4">
+  <link id="bsCss" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script>
+    (function () {
+      var d = localStorage.getItem('dir') || 'ltr';
+      var t = localStorage.getItem('theme') || 'light';
+      var h = document.documentElement;
+      h.dir = d;
+      h.dataset.theme = t;
+      h.dataset.bsTheme = t;
+      h.classList.add('js');
+      if (d === 'rtl') {
+        var l = document.getElementById('bsCss');
+        if (l) l.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==================== SITE HEADER & NAVIGATION ==================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" id="brand" href="index.html" aria-label="Fiesta Rosa Events Home">
+          <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+          <span class="brand-text">Fiesta<em>Rosa</em></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto gap-lg-1 gap-xl-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-stars me-2 text-pink"></i>Celebrations</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-gem me-2 text-pink"></i>Signature Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link active" href="services.html" aria-current="page">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <div class="header-actions d-flex align-items-center flex-nowrap gap-2 py-2 py-lg-0">
+            <button id="themeBtn" class="btn btn-icon theme-btn" type="button" aria-label="Toggle light and dark theme">🌙</button>
+            <button id="dirBtn" class="btn btn-icon dir-btn" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+            <div class="dropdown auth-dropdown d-inline-flex align-items-center">
+              <a class="btn btn-outline-brand d-inline-flex align-items-center gap-1" href="login.html" id="authSignInBtn">
+                <i class="bi bi-person-circle"></i>
+                <span id="authBtnLabel">Sign In</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow" id="authDropdownMenu" aria-labelledby="authSignInBtn"></ul>
+            </div>
+            <a class="btn btn-brand" href="contact.html#booking">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main">
+    <!-- 1. Centered Hero Banner (Unique Hero Photo #5) -->
+    <section class="hero hero-service-details" style="background-image: url('assets/img/hero/service-details.jpg');" role="img" aria-label="Floral arrangements, crystal glassware and table styling">
+      <div class="container hero-inner reveal">
+        <h1 class="mb-3">Service Details &amp; Pricing</h1>
+        <p class="lead mb-4">In-depth deliverables, family benefits, transparent pricing tiers, and answers to common planning questions.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a class="btn btn-brand btn-lg" href="contact.html#booking">Book a Service</a>
+          <a class="btn btn-light btn-lg" href="services.html">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Service Breakdown Tabs -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">Interactive Guide</span>
+          <h2>Select a Service to Inspect</h2>
+          <p class="muted">Switch between services below to review what is included, benefits, and transparent pricing.</p>
+        </div>
+
+        <ul class="nav nav-pills justify-content-center gap-2 mb-4" role="tablist">
+          <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#svc-venue" type="button" role="tab" aria-selected="true">🏛️ Venue Selection</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#svc-styling" type="button" role="tab" aria-selected="false">✨ Event Styling</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#svc-decor" type="button" role="tab" aria-selected="false">🌸 Decoration &amp; Florals</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#svc-catering" type="button" role="tab" aria-selected="false">🍰 Catering Coordination</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#svc-photo" type="button" role="tab" aria-selected="false">📸 Photography &amp; Video</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#svc-music" type="button" role="tab" aria-selected="false">🎶 Entertainment</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#svc-invites" type="button" role="tab" aria-selected="false">💌 Invitations</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#svc-full" type="button" role="tab" aria-selected="false">👑 Complete Planning</button></li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="svc-venue" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $500</span>
+                  <h2 class="h3">🏛️ Venue Selection &amp; Layout Architecture</h2>
+                  <p>Finding a ballroom, historic estate, or rooftop venue that fits your guest count, court waltz floor, and budget is the foundation of a great celebration. We shortlist top matches, schedule private walkthroughs, and negotiate dates and contract perks.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Personalized shortlist of 5–8 available venues matched to your guest list and theme</li>
+                    <li>Guided site visits with lighting, acoustics, and dressing-suite inspections</li>
+                    <li>CAD scale floorplan for banquet tables, stage, dance floor, and photo booths</li>
+                    <li>Contract review, force-majeure protection check, and complimentary hold management</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Typical Investment</span>
+                    <b>$500 – $950</b>
+                    <small class="muted">Waived when booked with Royal or Grand Gala packages</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="contact.html#booking">Book Venue Selection</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="svc-styling" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $850</span>
+                  <h2 class="h3">✨ Event Styling &amp; Bespoke Theme Concepting</h2>
+                  <p>Our creative directors translate your daughter’s personality into a cohesive visual identity—from custom 3D stage renders and Pantone color palettes to velvet linen swatches, charger plates, and ambient lighting cues.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Interactive 3D mood board and physical fabric/linen swatch presentation</li>
+                    <li>Harmonized dress color matching for the guest of honor, damas, and chambelanes</li>
+                    <li>Custom dance-floor monogram and LED backdrop graphic design</li>
+                    <li>Lighting plot specification for warm pin-spotting and dramatic waltz transitions</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Typical Investment</span>
+                    <b>$850 – $1,800</b>
+                    <small class="muted">Includes full mockup table preview session</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="contact.html#booking">Book Event Styling</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="svc-decor" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $1,200</span>
+                  <h2 class="h3">🌸 Decoration, Floral Couture &amp; Stage Styling</h2>
+                  <p>From Enchanted Garden floral arches to Rose Gold shimmer lounges, our creative studio produces custom backdrops, elevated table centerpieces, organic balloon sculptures, ceiling drapery, and sweetheart thrones.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Grand entrance floral arch, sweetheart throne stage, and tiered cake display styling</li>
+                    <li>Elevated crystal candelabra and lush rose/hydrangea table centerpieces</li>
+                    <li>Fresh floral bouquets for the guest of honor and court damas</li>
+                    <li>Full delivery, white-glove installation, and late-night strike crew included</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Typical Investment</span>
+                    <b>$1,200 – $4,500</b>
+                    <small class="muted">Scaled to table count and fresh floral density</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="contact.html#booking">Book Decoration &amp; Florals</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="svc-catering" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $400</span>
+                  <h2 class="h3">🍰 Catering Coordination &amp; Couture Cakes</h2>
+                  <p>Delight both teens and extended family with multi-course dinners, late-night taco or slider stations, signature zero-proof mocktail bars, and a show-stopping tiered Quinceañera or Sweet Sixteen cake.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Private tastings with top-rated regional caterers and couture pastry chefs</li>
+                    <li>Separate youth lounge menu &amp; formal adult dining service coordination</li>
+                    <li>Custom multi-tier cake design synced to your dress and floral theme</li>
+                    <li>Dietary allergy tracking and synchronized kitchen service timeline</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Coordination Fee</span>
+                    <b>From $400</b>
+                    <small class="muted">Plus per-guest catering &amp; bakery selections</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="contact.html#booking">Book Catering Coordination</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="svc-photo" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $900</span>
+                  <h2 class="h3">📸 Photography &amp; 4K Cinema Videography</h2>
+                  <p>Preserve every tear, laugh, and waltz spin with editorial pre-event gown sessions, multi-camera 4K cinema teams, aerial venue drone footage, and same-day social media highlight reels.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Golden-hour pre-shoot in her ball gown at a landmark botanical estate</li>
+                    <li>2 lead photographers + 2 cinema operators for up to 10 hours on celebration day</li>
+                    <li>360° slow-motion glam booth or red-carpet magazine portrait station</li>
+                    <li>Heirloom Italian leather album and private online cloud gallery</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Typical Investment</span>
+                    <b>$900 – $3,200</b>
+                    <small class="muted">Customizable hours &amp; album upgrades</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="contact.html#booking">Book Photo &amp; Video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="svc-music" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $700</span>
+                  <h2 class="h3">🎶 Entertainment, DJ &amp; Court Waltz Choreography</h2>
+                  <p>Keep every generation on the dance floor with bilingual MCs, concert-grade DJs, live mariachi serenades, LED robot Hora Loca shows, and private studio rehearsals for the court waltz and surprise dance.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Bilingual MC to host the shoe ceremony, tiara crowning, and candle dedications</li>
+                    <li>4 to 6 private studio choreography rehearsals for the court of honor</li>
+                    <li>Custom audio remix editing for the father-daughter and surprise dances</li>
+                    <li>Cold sparkler fountains and low-lying dancing-on-a-cloud floor effects</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Typical Investment</span>
+                    <b>$700 – $2,400</b>
+                    <small class="muted">Includes sound, wireless mics &amp; dance floor lighting</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="contact.html#booking">Book Entertainment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="svc-invites" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $250</span>
+                  <h2 class="h3">💌 Bilingual Invitations &amp; Day-Of Stationery</h2>
+                  <p>Set an unforgettable first impression with gold-foil acrylic or velvet-boxed invitations in English and Spanish, paired with a digital QR RSVP portal that updates your guest seating chart automatically.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Custom crest or monogram design for the guest of honor</li>
+                    <li>Bilingual wording etiquette review for parents and padrinos</li>
+                    <li>Matching welcome mirror signage, seating chart boards, and foil dinner menus</li>
+                    <li>Automated digital RSVP tracking synced to your Client Dashboard</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Typical Investment</span>
+                    <b>$250 – $850</b>
+                    <small class="muted">Based on quantity and paper/acrylic finish</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="contact.html#booking">Book Invitations</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="svc-full" role="tabpanel">
+            <div class="card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                  <span class="badge-gold mb-2">Starting from $2,500</span>
+                  <h2 class="h3">👑 Complete End-to-End Event Planning</h2>
+                  <p>Our flagship white-glove service: a dedicated Senior Event Director and 3-person day-of production team manage every single vendor, budget line, rehearsal, and timeline cue from day one through the final confetti toss.</p>
+                  <h3 class="h6 mt-3">Included Features &amp; Family Benefits</h3>
+                  <ul class="mb-0">
+                    <li>Unlimited planning consultations, vendor negotiations, and contract management</li>
+                    <li>Full church/ceremony rehearsal leadership and backstage court dressing-room care</li>
+                    <li>Minute-by-minute master production schedule distributed to all vendors</li>
+                    <li>Emergency bridal kit, steamer, and 3 on-site coordinators for 12 hours</li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <div class="kpi mb-3">
+                    <span class="muted small">Package Range</span>
+                    <b>$2,500 – $9,800</b>
+                    <small class="muted">See Sparkle, Royal &amp; Grand Gala packages</small>
+                  </div>
+                  <a class="btn btn-brand btn-lg w-100" href="packages.html">Compare Full Packages</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Service Delivery Process -->
+    <section class="section alt">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">Step-by-Step Execution</span>
+          <h2>How We Deliver Every Service</h2>
+          <p class="muted">A disciplined four-phase workflow that guarantees quality and punctuality.</p>
+        </div>
+        <div class="row g-4 text-center">
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="step">1</div>
+              <h3 class="h6">Scope &amp; Proposal</h3>
+              <p class="muted small mb-0">We review your guest count, venue specs, and inspiration photos to prepare an itemized quote.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="step">2</div>
+              <h3 class="h6">Mockup &amp; Tasting</h3>
+              <p class="muted small mb-0">Approve physical floral samples, cake flavors, or waltz music edits before production begins.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="step">3</div>
+              <h3 class="h6">Venue Walkthrough</h3>
+              <p class="muted small mb-0">30 days prior, we finalize power drops, table counts, and load-in schedules at the venue.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card p-4 h-100">
+              <div class="step">4</div>
+              <h3 class="h6">White-Glove Setup</h3>
+              <p class="muted small mb-0">Our insured crew installs, cues, and strikes everything on time so your family simply celebrates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Service FAQs Accordion -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="badge-gold mb-2">Common Questions</span>
+          <h2>Service &amp; Booking FAQs</h2>
+          <p class="muted">Everything you need to know about booking individual services or packages.</p>
+        </div>
+
+        <div class="accordion mx-auto reveal" id="svcFaq" style="max-width: 820px;">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fq1" aria-expanded="true">
+                How far in advance should we book a Quinceañera or Sweet Sixteen?
+              </button>
+            </h3>
+            <div id="fq1" class="accordion-collapse collapse show" data-bs-parent="#svcFaq">
+              <div class="accordion-body">
+                Most families book 9 to 14 months in advance to secure Saturday ballroom dates and couture gown fittings. However, our team also executes accelerated 3-to-6-month planning timelines.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fq2" aria-expanded="false">
+                Can we book individual services (like Floral Décor) without full planning?
+              </button>
+            </h3>
+            <div id="fq2" class="accordion-collapse collapse" data-bs-parent="#svcFaq">
+              <div class="accordion-body">
+                Yes! Every service above can be booked à la carte or bundled into our Sparkle, Royal, or Grand Gala packages for additional savings.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fq3" aria-expanded="false">
+                Do you coordinate traditional ceremonies (church mass, shoe change, crowning, candle lighting)?
+              </button>
+            </h3>
+            <div id="fq3" class="accordion-collapse collapse" data-bs-parent="#svcFaq">
+              <div class="accordion-body">
+                Absolutely. Our bilingual planners script and rehearse the thanksgiving mass, changing of the shoes, crowning of the tiara, last doll presentation, and 16-candle dedication ceremony.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fq4" aria-expanded="false">
+                How do payments and padrino (sponsor) contributions work?
+              </button>
+            </h3>
+            <div id="fq4" class="accordion-collapse collapse" data-bs-parent="#svcFaq">
+              <div class="accordion-body">
+                We split bookings into three milestone installments (initial deposit, mid-planning, and 14 days prior) and provide itemized invoices so family padrinos can sponsor specific items such as the cake, mariachi, or photography.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Booking Call to Action -->
+    <section class="section alt">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <span class="badge-gold mb-2">Start Your Journey</span>
+          <h2>Ready to Customize Your Services?</h2>
+          <p class="muted mx-auto" style="max-width: 620px;">
+            Tell us your dream theme, guest count, and traditions—our bilingual planners will craft a stress-free roadmap tailored to your family.
+          </p>
+        </div>
+        <div class="text-center reveal">
+          <a class="btn btn-brand btn-lg me-2 mb-2" href="contact.html#booking">Book a Consultation</a>
+          <a class="btn btn-outline-brand btn-lg mb-2" href="packages.html">Explore Packages</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 pb-4">
+        <!-- Column 1 – Brand -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a class="brand d-inline-flex mb-3" href="index.html" aria-label="Fiesta Rosa Events Home">
+            <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+            <span class="brand-text">Fiesta<em>Rosa</em></span>
+          </a>
+          <p class="footer-desc mb-3">
+            South Florida’s premier couture Quinceañera and Sweet Sixteen planning studio. Designing breathtaking milestones where sacred family traditions blend seamlessly with modern luxury.
+          </p>
+          <div class="footer-social d-flex flex-wrap gap-2" aria-label="Official Social Media Links">
+            <a class="soc" href="https://instagram.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Instagram profile" title="Follow Fiesta Rosa on Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://facebook.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Facebook page" title="Follow Fiesta Rosa on Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://pinterest.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Pinterest boards" title="Browse celebration themes on Pinterest">
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://youtube.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official YouTube channel" title="Watch event cinematic films on YouTube">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://tiktok.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official TikTok profile" title="Follow behind the scenes on TikTok">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 – Quick Links -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Quick Links</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="index.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Services</a></li>
+            <li><a href="packages.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Packages</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 – Customer Support -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Customer Support</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Contact Us</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Client Portal</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Login</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Register</a></li>
+            <li><a href="contact.html#faqs"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 – Contact Information -->
+        <div class="col-lg-4 col-md-12">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Contact Information</h2>
+          <ul class="list-unstyled footer-contact d-grid gap-2 mb-4">
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-envelope-heart"></i></span>
+              <div><strong class="contact-label">Email:</strong> <a href="mailto:hello@fiestarosa.example" class="text-reset text-decoration-none">hello@fiestarosa.example</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-telephone-outbound"></i></span>
+              <div><strong class="contact-label">Phone:</strong> <a href="tel:+919876543210" class="text-reset text-decoration-none">+91 98765 43210</a> / +1 (555) 123-4567</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <div><strong class="contact-label">Address:</strong> 123 Celebration Ave, Coral Gables, Miami, FL 33134</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-clock"></i></span>
+              <div><strong class="contact-label">Hours:</strong> Mon – Sat: 9:00 AM – 7:00 PM | Sun: By Appointment</div>
+            </li>
+          </ul>
+          <!-- Newsletter Quick Signup (Unified Pill Input Group) -->
+          <form id="newsletter" data-validate novalidate class="footer-newsletter">
+            <div class="footer-input-group">
+              <label class="visually-hidden" for="nl">Subscribe for celebration tips</label>
+              <input id="nl" class="form-control" type="email" placeholder="Your email address" required>
+              <button class="btn btn-brand" type="submit">Subscribe</button>
+            </div>
+            <p class="form-ok small mt-2" role="status" hidden>Thanks for subscribing to our celebration guide! 🎉</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Full-Width Divider -->
+      <hr class="footer-divider my-3">
+
+      <!-- Balanced Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center py-2 gap-2 small">
+        <p class="mb-0 copy-text opacity-75">
+          © 2026 Fiesta Rosa Events. All rights reserved. Quinceañera &amp; Sweet Sixteen Event Planners.
+        </p>
+        <div class="footer-legal d-flex flex-wrap gap-3 opacity-75">
+          <a href="about.html#values" class="text-decoration-none">Privacy Policy</a>
+          <span>·</span>
+          <a href="packages.html#compare" class="text-decoration-none">Terms of Service</a>
+          <span>·</span>
+          <a href="dashboard.html" class="text-decoration-none">Planning Portal (Demo)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Scroll to top" hidden>↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

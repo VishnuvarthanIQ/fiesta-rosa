@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#2e1140"/>
+    <stop offset="52%" stop-color="#6a1b9a"/>
+    <stop offset="100%" stop-color="#ec407a"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+    <stop offset="0%" stop-color="#ffe8a3" stop-opacity="0.75"/>
+    <stop offset="55%" stop-color="#f48fb1" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#fff2b2"/>
+    <stop offset="50%" stop-color="#f0c14b"/>
+    <stop offset="100%" stop-color="#b8860b"/>
+  </linearGradient>
+  <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#090312" stop-opacity="0.65"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="600" fill="url(#bg)"/>
+<ellipse cx="300" cy="252" rx="288" ry="252" fill="url(#glow)"/>
+<circle cx="591" cy="259" r="38" fill="url(#glow)" opacity="0.31"/><circle cx="90" cy="524" r="75" fill="#ffd978" opacity="0.32"/><circle cx="363" cy="590" r="19" fill="url(#glow)" opacity="0.22"/><circle cx="401" cy="396" r="39" fill="#ffd978" opacity="0.11"/><circle cx="64" cy="117" r="74" fill="url(#glow)" opacity="0.09"/><circle cx="598" cy="0" r="19" fill="#ffd978" opacity="0.17"/><circle cx="29" cy="150" r="39" fill="url(#glow)" opacity="0.29"/><circle cx="459" cy="433" r="74" fill="#ffd978" opacity="0.33"/><circle cx="298" cy="597" r="18" fill="url(#glow)" opacity="0.25"/><circle cx="141" cy="496" r="40" fill="#ffd978" opacity="0.14"/><circle cx="569" cy="219" r="74" fill="url(#glow)" opacity="0.08"/><circle cx="1" cy="14" r="18" fill="#ffd978" opacity="0.14"/><circle cx="537" cy="64" r="40" fill="url(#glow)" opacity="0.26"/><circle cx="196" cy="323" r="74" fill="#ffd978" opacity="0.33"/><circle cx="238" cy="561" r="18" fill="url(#glow)" opacity="0.29"/><circle cx="507" cy="566" r="41" fill="#ffd978" opacity="0.17"/><circle cx="9" cy="334" r="74" fill="url(#glow)" opacity="0.08"/><circle cx="585" cy="70" r="17" fill="#ffd978" opacity="0.11"/><circle cx="106" cy="11" r="41" fill="url(#glow)" opacity="0.23"/><circle cx="343" cy="209" r="73" fill="#ffd978" opacity="0.32"/><circle cx="420" cy="488" r="17" fill="url(#glow)" opacity="0.31"/><circle cx="52" cy="598" r="42" fill="#ffd978" opacity="0.2"/><circle cx="599" cy="443" r="73" fill="url(#glow)" opacity="0.1"/><circle cx="39" cy="160" r="17" fill="#ffd978" opacity="0.09"/><circle cx="442" cy="1" r="42" fill="url(#glow)" opacity="0.19"/><circle cx="319" cy="109" r="73" fill="#ffd978" opacity="0.3"/><circle cx="124" cy="386" r="17" fill="url(#glow)" opacity="0.32"/><circle cx="577" cy="587" r="43" fill="#ffd978" opacity="0.24"/>
+<path d="M571 164 L572.7 168.3 L577 170 L572.7 171.7 L571 176 L569.3 171.7 L565 170 L569.3 168.3 Z" fill="#fff6d6" opacity="0.85"/><path d="M104 179 L106.5 185.5 L113 188 L106.5 190.5 L104 197 L101.5 190.5 L95 188 L101.5 185.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M252 278 L255.4 286.6 L264 290 L255.4 293.4 L252 302 L248.6 293.4 L240 290 L248.6 286.6 Z" fill="#fff6d6" opacity="0.85"/><path d="M549 59 L553.2 69.8 L564 74 L553.2 78.2 L549 89 L544.8 78.2 L534 74 L544.8 69.8 Z" fill="#fff6d6" opacity="0.85"/><path d="M60 374 L65.0 387.0 L78 392 L65.0 397.0 L60 410 L55.0 397.0 L42 392 L55.0 387.0 Z" fill="#fff6d6" opacity="0.85"/><path d="M325 -14 L326.7 -9.7 L331 -8 L326.7 -6.3 L325 -2 L323.3 -6.3 L319 -8 L323.3 -9.7 Z" fill="#fff6d6" opacity="0.85"/><path d="M509 443 L511.5 449.5 L518 452 L511.5 454.5 L509 461 L506.5 454.5 L500 452 L506.5 449.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M32 -53 L35.4 -44.4 L44 -41 L35.4 -37.6 L32 -29 L28.6 -37.6 L20 -41 L28.6 -44.4 Z" fill="#fff6d6" opacity="0.85"/><path d="M397 441 L401.2 451.8 L412 456 L401.2 460.2 L397 471 L392.8 460.2 L382 456 L392.8 451.8 Z" fill="#fff6d6" opacity="0.85"/><path d="M455 -35 L460.0 -22.0 L473 -17 L460.0 -12.0 L455 1 L450.0 -12.0 L437 -17 L450.0 -22.0 Z" fill="#fff6d6" opacity="0.85"/><path d="M24 398 L25.7 402.3 L30 404 L25.7 405.7 L24 410 L22.3 405.7 L18 404 L22.3 402.3 Z" fill="#fff6d6" opacity="0.85"/><path d="M461 50 L463.5 56.5 L470 59 L463.5 61.5 L461 68 L458.5 61.5 L452 59 L458.5 56.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M389 296 L392.4 304.6 L401 308 L392.4 311.4 L389 320 L385.6 311.4 L377 308 L385.6 304.6 Z" fill="#fff6d6" opacity="0.85"/><path d="M34 155 L38.2 165.8 L49 170 L38.2 174.2 L34 185 L29.8 174.2 L19 170 L29.8 165.8 Z" fill="#fff6d6" opacity="0.85"/><path d="M515 170 L520.0 183.0 L533 188 L520.0 193.0 L515 206 L510.0 193.0 L497 188 L510.0 183.0 Z" fill="#fff6d6" opacity="0.85"/><path d="M317 284 L318.7 288.3 L323 290 L318.7 291.7 L317 296 L315.3 291.7 L311 290 L315.3 288.3 Z" fill="#fff6d6" opacity="0.85"/><path d="M64 65 L66.5 71.5 L73 74 L66.5 76.5 L64 83 L61.5 76.5 L55 74 L61.5 71.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M553 380 L556.4 388.6 L565 392 L556.4 395.4 L553 404 L549.6 395.4 L541 392 L549.6 388.6 Z" fill="#fff6d6" opacity="0.85"/>
+
+        <circle cx="300" cy="300" r="240" fill="#fff" opacity="0.1" stroke="url(#goldGrad)" stroke-width="4"/>
+        <circle cx="300" cy="95" r="48" fill="#3d1e14"/><path d="M185 235 Q180 120 300 120 Q420 120 415 235 Z" fill="#3d1e14"/>
+        <!-- Shoulders & Blazers -->
+        <path d="M120 600 Q140 435 300 435 Q460 435 480 600 Z" fill="#ad1457"/>
+        <path d="M245 438 L300 535 L355 438 Z" fill="#fff5f8"/>
+        <!-- Neck & Head -->
+        <rect x="272" y="345" width="56" height="68" rx="22" fill="#f3cfb3"/>
+        <ellipse cx="300" cy="255" rx="86" ry="102" fill="#f3cfb3"/>
+        <!-- Hair Front -->
+        <path d="M214 235 Q255 155 345 180 Q380 190 386 235 Q365 145 300 145 Q230 145 214 235 Z" fill="#3d1e14"/>
+        <!-- Facial Features -->
+        <ellipse cx="268" cy="250" rx="8" ry="10" fill="#2b192e"/>
+        <ellipse cx="332" cy="250" rx="8" ry="10" fill="#2b192e"/>
+        <path d="M254 232 Q268 224 282 232" fill="none" stroke="#3d1e14" stroke-width="4" stroke-linecap="round"/>
+        <path d="M318 232 Q332 224 346 232" fill="none" stroke="#3d1e14" stroke-width="4" stroke-linecap="round"/>
+        <path d="M274 298 Q300 320 326 298" fill="none" stroke="#c2185b" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="212" cy="272" r="7" fill="#ffd978"/><circle cx="388" cy="272" r="7" fill="#ffd978"/>
+        <!-- Role Pill -->
+        <rect x="190" y="535" width="220" height="36" rx="18" fill="#240b36" opacity="0.82" stroke="#ffd978" stroke-width="2"/>
+        <text x="300" y="559" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="16" font-weight="bold" fill="#ffd978">Creative Director</text>
+    
+</svg>

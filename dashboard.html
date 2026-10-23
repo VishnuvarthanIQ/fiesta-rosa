@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Planning Dashboard | Fiesta Rosa Events</title>
+  <meta name="description" content="Manage your Quinceañera or Sweet Sixteen celebration checklist, vendors, budget allocations, countdown timer, and schedule.">
+  <link rel="icon" href="assets/img/icons/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=4">
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico?v=4">
+  <link id="bsCss" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script>
+    (function () {
+      var d = localStorage.getItem('dir') || 'ltr';
+      var t = localStorage.getItem('theme') || 'light';
+      var h = document.documentElement;
+      h.dir = d;
+      h.dataset.theme = t;
+      h.dataset.bsTheme = t;
+      h.classList.add('js');
+      if (d === 'rtl') {
+        var l = document.getElementById('bsCss');
+        if (l) l.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dashboard-body">
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div id="dashBackdrop" class="dash-backdrop" aria-hidden="true"></div>
+
+  <div class="dashboard-wrapper">
+    <!-- ==================== LEFT SIDEBAR (RTL: RIGHT) ==================== -->
+    <aside id="dashSidebar" class="dash-sidebar" aria-label="Client Dashboard Navigation">
+      <!-- 1. Brand Logo & Compact Identity -->
+      <div class="dash-sidebar-brand">
+        <a class="brand d-inline-flex align-items-center text-decoration-none" href="index.html" aria-label="Fiesta Rosa Events Home">
+          <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="38" height="38">
+          <span class="brand-text fs-5">Fiesta<em>Rosa</em></span>
+        </a>
+        <button id="dashSidebarClose" class="btn btn-sm d-lg-none" type="button" aria-label="Close sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- 2. Client Profile Pill -->
+      <div class="dash-user-badge px-3 py-2">
+        <div class="d-flex align-items-center gap-2">
+          <div class="dash-avatar">👑</div>
+          <div class="overflow-hidden">
+            <strong class="d-block text-truncate" id="dashSidebarUser">Sofia &amp; Family</strong>
+            <span class="small muted">Quinceañera Gala 2027</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Sidebar Navigation Links -->
+      <nav class="dash-nav-list" aria-label="Dashboard sections">
+        <a href="#overview" class="dash-nav-link active">
+          <i class="bi bi-speedometer2"></i>
+          <span>Dashboard Overview</span>
+        </a>
+        <a href="#events" class="dash-nav-link">
+          <i class="bi bi-calendar2-heart"></i>
+          <span>My Events</span>
+        </a>
+        <a href="#checklist" class="dash-nav-link">
+          <i class="bi bi-check2-square"></i>
+          <span>Planning Checklist</span>
+        </a>
+        <a href="#vendors" class="dash-nav-link">
+          <i class="bi bi-building"></i>
+          <span>Vendor Bookings</span>
+        </a>
+        <a href="#budget" class="dash-nav-link">
+          <i class="bi bi-wallet2"></i>
+          <span>Budget Tracker</span>
+        </a>
+        <a href="#schedule" class="dash-nav-link">
+          <i class="bi bi-clock-history"></i>
+          <span>Event Schedule</span>
+        </a>
+        <a href="#saved" class="dash-nav-link">
+          <i class="bi bi-bookmark-heart"></i>
+          <span>Saved Packages</span>
+        </a>
+        <a href="#notifications" class="dash-nav-link">
+          <i class="bi bi-bell"></i>
+          <span>Notifications</span>
+          <span class="badge bg-danger rounded-pill ms-auto small">3</span>
+        </a>
+        <a href="#profile" class="dash-nav-link">
+          <i class="bi bi-gear"></i>
+          <span>Profile Settings</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ==================== MAIN DASHBOARD CONTENT AREA ==================== -->
+    <main id="mainContent" class="dash-main">
+      <!-- Sticky Topbar (Mobile Hamburger Toggle & Top-Right Controls) -->
+      <header class="dash-topbar d-flex align-items-center justify-content-between px-3 px-md-4">
+        <div class="d-flex align-items-center gap-2 overflow-hidden">
+          <button id="dashSidebarToggle" class="btn btn-icon d-lg-none flex-shrink-0" type="button" aria-label="Open sidebar menu">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+          <div class="overflow-hidden">
+            <h1 class="h6 mb-0 fw-bold text-truncate"><span class="d-none d-sm-inline">Family </span>Planning Portal</h1>
+            <span class="muted small d-none d-md-inline">Fiesta Rosa Events &middot; Couture Celebration Suite</span>
+          </div>
+        </div>
+        <!-- Top-Right Controls: Theme, Direction, Logout -->
+        <div class="d-flex align-items-center gap-1 gap-sm-2 flex-shrink-0">
+          <a href="index.html" class="btn btn-chip btn-sm text-decoration-none d-none d-md-inline-flex align-items-center">
+            <i class="bi bi-house me-1"></i> Public Website
+          </a>
+          <button id="themeBtn" class="btn btn-icon theme-btn" type="button" aria-label="Toggle light and dark theme">🌙</button>
+          <button id="dirBtn" class="btn btn-icon dir-btn" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+          <button id="logout" class="btn btn-outline-brand btn-sm d-inline-flex align-items-center justify-content-center" type="button" aria-label="Log Out" title="Log Out">
+            <i class="bi bi-box-arrow-right"></i>
+            <span class="d-none d-md-inline ms-1">Log Out</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Main Content Body -->
+      <div class="dash-content-body p-3 p-md-4 d-grid gap-4">
+        <!-- Planning Suite Notice -->
+        <div class="demo-banner p-3 d-flex flex-wrap justify-content-between align-items-center gap-2" role="note">
+          <span class="small">
+            <strong><i class="bi bi-shield-check me-1"></i>Planning Portal Suite:</strong>
+            All celebration tasks, vendor milestones, budget tracking, and journal notes are active in your personal planning session.
+          </span>
+          <span class="badge-gold">Planning Suite</span>
+        </div>
+
+        <!-- 1. Overview & Event Countdown Section -->
+        <section id="overview" class="card p-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div>
+              <h2 class="h4 mb-1">Welcome back, <span id="uname">Sofia &amp; Family</span>!</h2>
+              <p class="muted small mb-0">Your Quinceañera celebration planning is right on schedule.</p>
+            </div>
+            <span class="badge-gold">👑 Royal Couture Package</span>
+          </div>
+
+          <!-- Summary KPI Cards -->
+          <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3">
+              <div class="kpi">
+                <span class="muted small">Checklist Done</span>
+                <b id="kpiTasks">6 / 10</b>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="kpi">
+                <span class="muted small">Confirmed Vendors</span>
+                <b id="kpiVendors">5 / 7</b>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="kpi">
+                <span class="muted small">Budget Allocated</span>
+                <b id="kpiBudget">$16,500</b>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="kpi">
+                <span class="muted small">Days Remaining</span>
+                <b class="text-pink">184 Days</b>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Celebration Countdown Banner -->
+          <div class="card p-3 p-md-4" style="background: linear-gradient(135deg, rgba(194, 24, 91, 0.08), rgba(123, 31, 162, 0.08)); border-color: var(--pink);">
+            <div class="row align-items-center g-3">
+              <div class="col-md-5">
+                <h3 class="h5 mb-1">Grand Gala Countdown</h3>
+                <p class="muted small mb-0">November 20, 2027 · Coral Gables Royal Ballroom</p>
+              </div>
+              <div class="col-md-7">
+                <div class="d-flex justify-content-center justify-content-md-end gap-2 text-center" data-countdown="2027-11-20T18:00:00">
+                  <div class="card p-2 px-3"><b class="fs-4 text-pink" data-u="d">184</b><small class="muted" style="font-size: 0.7rem;">DAYS</small></div>
+                  <div class="card p-2 px-3"><b class="fs-4 text-pink" data-u="h">14</b><small class="muted" style="font-size: 0.7rem;">HOURS</small></div>
+                  <div class="card p-2 px-3"><b class="fs-4 text-pink" data-u="m">32</b><small class="muted" style="font-size: 0.7rem;">MINS</small></div>
+                  <div class="card p-2 px-3"><b class="fs-4 text-pink" data-u="s">45</b><small class="muted" style="font-size: 0.7rem;">SECS</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. My Events Section -->
+        <section id="events" class="card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0"><i class="bi bi-calendar2-heart text-gold me-2"></i>My Scheduled Celebrations</h2>
+            <span class="badge-gold">1 Active Event</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Celebration Type</th>
+                  <th>Target Date</th>
+                  <th>Venue</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Sofia’s Royal Quinceañera</strong></td>
+                  <td>Traditional Quinceañera (15 Años)</td>
+                  <td>Nov 20, 2027</td>
+                  <td>Coral Gables Grand Ballroom, Miami</td>
+                  <td><span class="badge bg-success">In Active Production</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 3. Planning Checklist Section -->
+        <section id="checklist" class="card p-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div>
+              <h2 class="h5 mb-1"><i class="bi bi-check2-square text-gold me-2"></i>Planning Checklist &amp; Milestones</h2>
+              <p class="muted small mb-0">Click checkboxes to mark tasks as completed.</p>
+            </div>
+            <div class="progress" style="width: 140px; height: 10px;" role="progressbar" aria-label="Checklist completion">
+              <div id="progBar" class="progress-bar bg-success" style="width: 60%;"></div>
+            </div>
+          </div>
+
+          <div class="list-group list-group-flush" id="taskList">
+            <label class="list-group-item d-flex gap-3 align-items-center py-3">
+              <input class="form-check-input flex-shrink-0" type="checkbox" checked data-task="venue">
+              <div class="flex-grow-1">
+                <strong>Confirm Grand Ballroom Booking &amp; Contract Deposit</strong>
+                <span class="d-block muted small">Completed with lead planner Elena Rostova · Capacity: 220 Guests</span>
+              </div>
+              <span class="badge-gold small">Done</span>
+            </label>
+            <label class="list-group-item d-flex gap-3 align-items-center py-3">
+              <input class="form-check-input flex-shrink-0" type="checkbox" checked data-task="theme">
+              <div class="flex-grow-1">
+                <strong>Finalize Floral Theme &amp; Color Palette (Rose Gold &amp; Midnight Plum)</strong>
+                <span class="d-block muted small">Floral mood board approved with couture studio</span>
+              </div>
+              <span class="badge-gold small">Done</span>
+            </label>
+            <label class="list-group-item d-flex gap-3 align-items-center py-3">
+              <input class="form-check-input flex-shrink-0" type="checkbox" checked data-task="photo">
+              <div class="flex-grow-1">
+                <strong>Schedule Editorial Pre-Gala Photography Session</strong>
+                <span class="d-block muted small">Scheduled for August 15 at Vizcaya Gardens</span>
+              </div>
+              <span class="badge-gold small">Done</span>
+            </label>
+            <label class="list-group-item d-flex gap-3 align-items-center py-3">
+              <input class="form-check-input flex-shrink-0" type="checkbox" data-task="catering">
+              <div class="flex-grow-1">
+                <strong>Private Banquet Menu Tasting &amp; Custom 5-Tier Cake Selection</strong>
+                <span class="d-block muted small">Tasting booked for next month with Chef Miguel</span>
+              </div>
+              <span class="badge bg-secondary small">Pending</span>
+            </label>
+            <label class="list-group-item d-flex gap-3 align-items-center py-3">
+              <input class="form-check-input flex-shrink-0" type="checkbox" data-task="waltz">
+              <div class="flex-grow-1">
+                <strong>Grand Vals &amp; Surprise Dance Choreography Rehearsals</strong>
+                <span class="d-block muted small">6 court rehearsals scheduled with dance instructor</span>
+              </div>
+              <span class="badge bg-secondary small">Pending</span>
+            </label>
+            <label class="list-group-item d-flex gap-3 align-items-center py-3">
+              <input class="form-check-input flex-shrink-0" type="checkbox" data-task="invites">
+              <div class="flex-grow-1">
+                <strong>Mail Luxury Foil-Stamped Bilingual Invitations &amp; Launch QR RSVP</strong>
+                <span class="d-block muted small">Scheduled 8 weeks prior to event date</span>
+              </div>
+              <span class="badge bg-secondary small">Pending</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- 4. Vendor Bookings Section -->
+        <section id="vendors" class="card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0"><i class="bi bi-building text-gold me-2"></i>Vendor Bookings &amp; Contracts</h2>
+            <span class="badge-gold">5 Vetted Vendors</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-3 h-100">
+                <span class="badge bg-success align-self-start mb-2">Confirmed</span>
+                <h3 class="h6 mb-1">🏛️ Coral Gables Ballroom</h3>
+                <p class="muted small mb-2">Venue &amp; Crystal Chandelier Staging</p>
+                <span class="small">Contact: <a href="tel:+13055551234">+1 (305) 555-1234</a></span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-3 h-100">
+                <span class="badge bg-success align-self-start mb-2">Confirmed</span>
+                <h3 class="h6 mb-1">📸 Lumina Cinema Studio</h3>
+                <p class="muted small mb-2">Lead 4K Cinema Team &amp; Drone Crew</p>
+                <span class="small">Contact: <a href="mailto:cinema@fiestarosa.example">cinema@fiestarosa.example</a></span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-3 h-100">
+                <span class="badge bg-success align-self-start mb-2">Confirmed</span>
+                <h3 class="h6 mb-1">🌸 Rosa Floral Couture</h3>
+                <p class="muted small mb-2">Sweetheart Stage Arches &amp; Tables</p>
+                <span class="small">Status: Mood board approved</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-3 h-100">
+                <span class="badge bg-success align-self-start mb-2">Confirmed</span>
+                <h3 class="h6 mb-1">🎶 Miami Nightlife DJs</h3>
+                <p class="muted small mb-2">Bilingual MC &amp; Intelligent Uplighting</p>
+                <span class="small">Status: Playlist submitted</span>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card p-3 h-100">
+                <span class="badge bg-warning text-dark align-self-start mb-2">Awaiting Tasting</span>
+                <h3 class="h6 mb-1">🍰 Bella Pastry Studio</h3>
+                <p class="muted small mb-2">5-Tier Vanilla Bean &amp; Raspberry Cake</p>
+                <span class="small">Status: Tasting scheduled</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Budget Tracker Section -->
+        <section id="budget" class="card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0"><i class="bi bi-wallet2 text-gold me-2"></i>Budget Tracker &amp; Allocations</h2>
+            <span class="badge-gold">Estimated Total: $18,500</span>
+          </div>
+          <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+              <ul class="list-unstyled d-grid gap-2 mb-0">
+                <li class="d-flex justify-content-between"><span>🏛️ Venue &amp; Rentals:</span> <strong>$7,500 (40%)</strong></li>
+                <li class="d-flex justify-content-between"><span>🌸 Couture Décor &amp; Florals:</span> <strong>$3,500 (19%)</strong></li>
+                <li class="d-flex justify-content-between"><span>🍰 Catering &amp; Cake:</span> <strong>$3,200 (17%)</strong></li>
+                <li class="d-flex justify-content-between"><span>📸 Photography &amp; Cinema:</span> <strong>$2,400 (13%)</strong></li>
+                <li class="d-flex justify-content-between"><span>🎶 Music, DJ &amp; Lighting:</span> <strong>$1,200 (6%)</strong></li>
+                <li class="d-flex justify-content-between"><span>💌 Invitations &amp; Favors:</span> <strong>$700 (4%)</strong></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 card" style="background: var(--soft);">
+                <h3 class="h6 mb-2">Budget Health: On Track</h3>
+                <p class="muted small mb-3">90% of vendor services locked in with zero price escalation clauses.</p>
+                <div class="progress mb-2" style="height: 12px;">
+                  <div class="progress-bar bg-pink" style="width: 89%;"></div>
+                </div>
+                <div class="d-flex justify-content-between small muted">
+                  <span>Spent: $16,500</span>
+                  <span>Buffer Remaining: $2,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Event Schedule / Run of Show Section -->
+        <section id="schedule" class="card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0"><i class="bi bi-clock-history text-gold me-2"></i>Grand Gala Day Run-of-Show</h2>
+            <span class="badge-gold">Day Timeline</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-sm align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Activity / Milestone</th>
+                  <th>Location</th>
+                  <th>Lead Coordinator</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>1:00 PM</strong></td><td>Hair, Makeup &amp; Royal Robing</td><td>Bridal Suite</td><td>Elena Rostova</td></tr>
+                <tr><td><strong>3:30 PM</strong></td><td>Family Blessing &amp; Pre-Event Photos</td><td>Garden Courtyard</td><td>Mateo Cinema</td></tr>
+                <tr><td><strong>5:30 PM</strong></td><td>Cocktail Reception &amp; Guest Arrival</td><td>Ballroom Foyer</td><td>Fiesta Rosa Host</td></tr>
+                <tr><td><strong>6:30 PM</strong></td><td>Grand Royal Entrance &amp; Toast</td><td>Main Ballroom Stage</td><td>Bilingual MC</td></tr>
+                <tr><td><strong>7:00 PM</strong></td><td>Three-Course Formal Dinner</td><td>Main Ballroom</td><td>Banquet Captain</td></tr>
+                <tr><td><strong>8:30 PM</strong></td><td>Traditional Father-Daughter Waltz</td><td>Center Dance Floor</td><td>Elena Rostova</td></tr>
+                <tr><td><strong>9:00 PM</strong></td><td>Hora Loca &amp; DJ Open Dance Floor</td><td>Main Ballroom</td><td>Miami DJs</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 7. Saved Packages & Favorites -->
+        <section id="saved" class="card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0"><i class="bi bi-bookmark-heart text-gold me-2"></i>Saved Packages &amp; Favorites</h2>
+            <a href="packages.html" class="btn btn-outline-brand btn-sm">Browse All Packages</a>
+          </div>
+          <div class="p-3 card mb-0" style="background: var(--soft);">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+              <div>
+                <h3 class="h6 mb-1">Selected: <strong>Royal Couture Package</strong></h3>
+                <span class="muted small">150 Guests · Venue, Full Florals, Multi-Tier Cake, Photography, Vals Choreography</span>
+              </div>
+              <span class="price fs-4">$9,500</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Saved Packages Section (Referenced in Sidebar) -->
+        <!-- 9. Notifications & Alerts Section -->
+        <section id="notifications" class="card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0"><i class="bi bi-bell text-gold me-2"></i>Celebration Notifications &amp; Reminders</h2>
+            <span class="badge bg-danger rounded-pill">3 New</span>
+          </div>
+          <div class="list-group list-group-flush">
+            <div class="list-group-item d-flex gap-3 align-items-start py-3 px-0 border-bottom">
+              <i class="bi bi-calendar-check-fill text-success fs-5"></i>
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <strong>Ballroom Staging Layout Approved</strong>
+                  <span class="small muted">2 hrs ago</span>
+                </div>
+                <p class="small muted mb-0">Grand Ballroom floor staging and chandelier lighting plan finalized with lead planner Elena.</p>
+              </div>
+            </div>
+            <div class="list-group-item d-flex gap-3 align-items-start py-3 px-0 border-bottom">
+              <i class="bi bi-cup-hot-fill text-warning fs-5"></i>
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <strong>Private Cake Tasting Reminder</strong>
+                  <span class="small muted">Yesterday</span>
+                </div>
+                <p class="small muted mb-0">Private tasting session with Bella Pastry Studio scheduled for this Saturday at 2:00 PM.</p>
+              </div>
+            </div>
+            <div class="list-group-item d-flex gap-3 align-items-start py-3 px-0">
+              <i class="bi bi-music-note-beamed text-pink fs-5"></i>
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-between">
+                  <strong>Vals Choreography Soundtrack Confirmed</strong>
+                  <span class="small muted">3 days ago</span>
+                </div>
+                <p class="small muted mb-0">DJ Aurora confirmed receipt of your quince waltz and surprise dance music soundtrack.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. Messages & Planner Notes -->
+        <section id="messages" class="card p-4">
+          <h2 class="h5 mb-3"><i class="bi bi-chat-dots text-gold me-2"></i>Messages &amp; Planner Notes</h2>
+          <div class="card p-3 mb-3" style="background: var(--soft);">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <strong>Elena Rostova (Lead Planner)</strong>
+              <small class="muted">Yesterday at 4:15 PM</small>
+            </div>
+            <p class="muted small mb-0">"Hi Sofia and family! We reviewed your custom playlist and confirmed the ballroom uplighting cues for the waltz. Everything is looking magnificent for November!"</p>
+          </div>
+          <form id="dashNoteForm" onsubmit="event.preventDefault(); window.showDemoModal({ title: 'Note Saved', message: 'Your note has been saved to your planning log.', badge: 'Planning Journal' }); this.reset();">
+            <div class="mb-2">
+              <label class="visually-hidden" for="dashNote">Add planning note</label>
+              <textarea id="dashNote" class="form-control" rows="2" placeholder="Leave a note or question for your planner..." required></textarea>
+            </div>
+            <button class="btn btn-brand btn-sm" type="submit">Save Note</button>
+          </form>
+        </section>
+
+        <!-- 11. Profile Settings -->
+        <section id="profile" class="card p-4">
+          <h2 class="h5 mb-3"><i class="bi bi-gear text-gold me-2"></i>Profile &amp; Family Settings</h2>
+          <form id="profileForm" data-validate novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label small" for="profName">Primary Contact Name *</label>
+                <input class="form-control" id="profName" name="profName" type="text" value="Sofia Reyes" required autocomplete="name" data-type="name" minlength="2">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small" for="profEmail">Email Address *</label>
+                <input class="form-control" id="profEmail" name="profEmail" type="email" value="family@fiestarosa.example" required autocomplete="email" data-type="email">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small" for="profPhone">Contact Phone (10 Digits) *</label>
+                <input class="form-control" id="profPhone" name="profPhone" type="tel" value="9876543210" pattern="[0-9]{10}" maxlength="10" minlength="10" inputmode="numeric" placeholder="9876543210" required data-type="phone" autocomplete="tel">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small" for="profLang">Preferred Language</label>
+                <select class="form-select" id="profLang" name="profLang">
+                  <option selected>Bilingual (English &amp; Spanish)</option>
+                  <option>English Only</option>
+                  <option>Spanish Only</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-brand btn-sm mt-3" type="submit">Save Settings</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Reusable Status Modal -->
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <div class="modal-header border-0 pb-0 justify-content-end">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-0 pb-3">
+          <div id="demoModalIcon" class="demo-modal-icon mx-auto mb-3">
+            <i class="bi bi-check-circle-fill text-success fs-1"></i>
+          </div>
+          <span id="demoModalBadge" class="badge-gold mb-2">Planning Suite</span>
+          <h3 id="demoModalTitle" class="h4 mb-2">Operation Successful</h3>
+          <p id="demoModalMsg" class="mb-3">Action completed in your planning session.</p>
+          <p class="muted small mb-0 opacity-75">
+            <i class="bi bi-info-circle me-1"></i>Note: Planning data is securely maintained in your browser storage.
+          </p>
+        </div>
+        <div class="modal-footer border-0 pt-0 justify-content-center">
+          <button type="button" id="demoModalOkBtn" class="btn btn-brand px-4 py-2" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Logout Confirmation Modal -->
+  <div class="modal fade" id="dashLogoutModal" tabindex="-1" aria-labelledby="dashLogoutTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <div class="modal-header border-0 pb-0 justify-content-end">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-0 pb-3">
+          <div class="demo-modal-icon mx-auto mb-3">
+            <i class="bi bi-box-arrow-right text-pink fs-1"></i>
+          </div>
+          <span class="badge-gold mb-2">Portal Session</span>
+          <h3 id="dashLogoutTitle" class="h4 mb-2">Confirm Logout</h3>
+          <p class="mb-3">Are you sure you want to end your planning session?</p>
+          <p class="muted small mb-0 opacity-75">
+            Your temporary client session will be cleared and you will be returned to the Sign In page.
+          </p>
+        </div>
+        <div class="modal-footer border-0 pt-0 justify-content-center gap-2">
+          <button type="button" class="btn btn-light px-4" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" id="confirmLogoutBtn" class="btn btn-brand px-4">Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

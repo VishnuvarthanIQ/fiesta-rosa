@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Celebration Planning Blog &amp; Journal | Fiesta Rosa Events</title>
+  <meta name="description" content="Searchable and filterable articles about Quinceañera and Sweet Sixteen themes, ball gowns, decorations, budgets, venues, and timelines.">
+  <link rel="icon" href="assets/img/icons/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png?v=4">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png?v=4">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=4">
+  <link rel="shortcut icon" href="assets/img/icons/favicon.ico?v=4">
+  <link id="bsCss" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script>
+    (function () {
+      var d = localStorage.getItem('dir') || 'ltr';
+      var t = localStorage.getItem('theme') || 'light';
+      var h = document.documentElement;
+      h.dir = d;
+      h.dataset.theme = t;
+      h.dataset.bsTheme = t;
+      h.classList.add('js');
+      if (d === 'rtl') {
+        var l = document.getElementById('bsCss');
+        if (l) l.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css';
+      }
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      prefix: 'tw-',
+      corePlugins: { preflight: false }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ==================== SITE HEADER & NAVIGATION ==================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand brand" id="brand" href="index.html" aria-label="Fiesta Rosa Events Home">
+          <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+          <span class="brand-text">Fiesta<em>Rosa</em></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto gap-lg-1 gap-xl-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="index.html"><i class="bi bi-stars me-2 text-pink"></i>Celebrations</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-gem me-2 text-pink"></i>Signature Events</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+          <div class="header-actions d-flex align-items-center flex-nowrap gap-2 py-2 py-lg-0">
+            <button id="themeBtn" class="btn btn-icon theme-btn" type="button" aria-label="Toggle light and dark theme">🌙</button>
+            <button id="dirBtn" class="btn btn-icon dir-btn" type="button" aria-label="Toggle right-to-left layout">RTL</button>
+            <div class="dropdown auth-dropdown d-inline-flex align-items-center">
+              <a class="btn btn-outline-brand d-inline-flex align-items-center gap-1" href="login.html" id="authSignInBtn">
+                <i class="bi bi-person-circle"></i>
+                <span id="authBtnLabel">Sign In</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow" id="authDropdownMenu" aria-labelledby="authSignInBtn"></ul>
+            </div>
+            <a class="btn btn-brand" href="contact.html#booking">Book Consultation</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main">
+    <!-- 1. Centered Hero Banner (Unique Hero Photo #8) -->
+    <section class="hero hero-blog" style="background-image: url('assets/img/hero/blog.jpg');" role="img" aria-label="Event planning inspiration, mood boards and floral accents">
+      <div class="container hero-inner reveal">
+        <h1 class="mb-3">Inspiration &amp; Planning Guides</h1>
+        <p class="lead mb-4">Expert advice on trending themes, couture gowns, floral budgets, ballroom tours, and month-by-month timelines from our lead planners.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a class="btn btn-brand btn-lg" href="#posts">Browse All Articles</a>
+          <a class="btn btn-light btn-lg" href="contact.html#booking">Ask a Planner</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Search, Category Filters, Blog Posts Grid & Sticky Sidebar -->
+    <section class="section" id="posts">
+      <div class="container">
+        <!-- Section Header with Editorial Badge -->
+        <div class="text-center mb-4 reveal">
+          <span class="badge-gold mb-2"><i class="bi bi-journal-bookmark me-1"></i>Planning Journal &amp; Guides</span>
+          <h2>The Couture Milestone Journal</h2>
+          <p class="muted mx-auto" style="max-width: 660px;">Curated design wisdom, budgeting frameworks, ballroom decor inspiration, and timeline advice from South Florida's premier Quinceañera and Sweet Sixteen team.</p>
+        </div>
+
+        <!-- Category Filters Bar & Search Controls (Clean Top Row Aligned on Desktop) -->
+        <div class="blog-filter-toolbar mb-4">
+          <div class="row g-3 align-items-center justify-content-between">
+            <!-- Category Filter Bar (compact buttons, responsive horizontal scroll on mobile) -->
+            <div class="col-lg-8 col-xl-8">
+              <div class="blog-filters-scroll" role="group" aria-label="Filter articles by topic">
+                <button class="btn btn-chip active" type="button" data-bcat="all">All Topics (24)</button>
+                <button class="btn btn-chip" type="button" data-bcat="themes" id="cat-themes">Themes</button>
+                <button class="btn btn-chip" type="button" data-bcat="dresses" id="cat-dresses">Dresses</button>
+                <button class="btn btn-chip" type="button" data-bcat="decor" id="cat-decor">Décor &amp; Florals</button>
+                <button class="btn btn-chip" type="button" data-bcat="budget" id="cat-budget">Budget</button>
+                <button class="btn btn-chip" type="button" data-bcat="venues" id="cat-venues">Venues</button>
+                <button class="btn btn-chip" type="button" data-bcat="traditions" id="cat-traditions">Traditions &amp; Waltz</button>
+                <button class="btn btn-chip" type="button" data-bcat="catering" id="cat-catering">Catering &amp; Cakes</button>
+                <button class="btn btn-chip" type="button" data-bcat="photo" id="cat-photo">Photography</button>
+                <button class="btn btn-chip" type="button" data-bcat="music" id="cat-music">Music</button>
+                <button class="btn btn-chip" type="button" data-bcat="tips" id="cat-tips">Planning Tips</button>
+              </div>
+            </div>
+            <!-- Search & Sort Controls Aligned with Filters on Desktop -->
+            <div class="col-lg-4 col-xl-4">
+              <div class="d-flex gap-2">
+                <div class="input-group blog-search-group shadow-sm flex-grow-1">
+                  <span class="input-group-text bg-surface border-end-0 text-muted"><i class="bi bi-search text-pink"></i></span>
+                  <input id="blogSearch" class="form-control border-start-0" type="search" placeholder="Search guides, themes, venues…" aria-label="Search blog articles">
+                </div>
+                <div class="d-none d-sm-block" style="width: 140px;">
+                  <select id="blogSort" class="form-select shadow-sm" aria-label="Sort blog articles">
+                    <option value="newest" selected>Newest</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="title">A – Z</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Responsive Articles Grid (Equal widths, uniform image heights, aligned Read More buttons) -->
+        <div class="row g-4" id="postsGrid">
+              <!-- Article 1: Quinceañera Theme Ideas -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="quinceanera-theme-ideas" data-cat="themes" data-date="2026-10-10" data-title="Quinceañera Theme Ideas for an Unforgettable Celebration" data-text="quinceañera theme ideas for an unforgettable celebration themes enchanted garden midnight masquerade royal fairytale sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=quinceanera-theme-ideas" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/quinceanera-theme-ideas.jpg" class="blog-card-img" alt="Quinceañera theme decorations and botanical fairytale stage" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Themes</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Oct 10, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=quinceanera-theme-ideas" class="text-decoration-none text-reset hover-pink">Quinceañera Theme Ideas for an Unforgettable Celebration</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Explore trending aesthetic concepts from Enchanted Botanical Garden to Midnight Masquerade and Royal Fairytale with curated color palettes.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=quinceanera-theme-ideas" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 2: Sweet Sixteen Party Themes -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="sweet-sixteen-party-themes" data-cat="themes" data-date="2026-10-06" data-title="Sweet Sixteen Party Themes for Different Personalities" data-text="sweet sixteen party themes for different personalities indie bohemian hollywood glam celestial neon disco elena rostova">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=sweet-sixteen-party-themes" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/sweet-sixteen-party-themes.jpg" class="blog-card-img" alt="Sweet Sixteen party lights celebration sparklers" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Themes</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>5 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Oct 06, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=sweet-sixteen-party-themes" class="text-decoration-none text-reset hover-pink">Sweet Sixteen Party Themes for Different Personalities</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Match her personal style with customized aesthetics: from Hollywood Red Carpet to Celestial Boho and Electric Neon Disco dance experiences.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">ER</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Elena Rostova</span>
+                          <span class="muted micro">Creative Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=sweet-sixteen-party-themes" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 3: How to Plan a Quinceañera on a Budget -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="how-to-plan-a-quinceanera-on-a-budget" data-cat="budget" data-date="2026-09-28" data-title="How to Plan a Quinceañera on a Budget" data-text="how to plan a quinceañera on a budget finance breakdown padrino contributions cost saving tips mateo cruz">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=how-to-plan-a-quinceanera-on-a-budget" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/budget-planning-guide.jpg" class="blog-card-img" alt="Planning notebook and financial budget calculator" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Budget</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>8 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Sep 28, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=how-to-plan-a-quinceanera-on-a-budget" class="text-decoration-none text-reset hover-pink">How to Plan a Quinceañera on a Budget</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Practical percentage breakdowns, maximizing padrino sponsorships, and strategic vendor allocations without sacrificing style or sacred traditions.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">MC</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Mateo Cruz</span>
+                          <span class="muted micro">Production Lead</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=how-to-plan-a-quinceanera-on-a-budget" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 4: Choosing the Perfect Celebration Venue -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="choosing-the-perfect-celebration-venue" data-cat="venues" data-date="2026-09-20" data-title="Choosing the Perfect Celebration Venue" data-text="choosing the perfect celebration venue ballroom capacity dance floor dimensions questions to ask sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=choosing-the-perfect-celebration-venue" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/celebration-venue-selection.jpg" class="blog-card-img" alt="Grand celebration ballroom with banquet table settings" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Venues</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>7 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Sep 20, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=choosing-the-perfect-celebration-venue" class="text-decoration-none text-reset hover-pink">Choosing the Perfect Celebration Venue</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Evaluating ceiling clearance, court waltz dance floor square footage, in-house catering clauses, and 12 essential questions for site tours.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=choosing-the-perfect-celebration-venue" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 5: Elegant Floral and Balloon Decoration Ideas -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="elegant-floral-and-balloon-decoration-ideas" data-cat="decor" data-date="2026-09-14" data-title="Elegant Floral and Balloon Decoration Ideas" data-text="elegant floral and balloon decoration ideas arches centerpieces organic installations uplighting camila vega">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=elegant-floral-and-balloon-decoration-ideas" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/floral-balloon-decor.jpg" class="blog-card-img" alt="Sweet 16 floral and balloon luxury styling with warm fairy lights" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Décor</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Sep 14, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=elegant-floral-and-balloon-decoration-ideas" class="text-decoration-none text-reset hover-pink">Elegant Floral and Balloon Decoration Ideas</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Cascading garden rose arches, organic chrome-gold balloon garland tunnels, and fairy-light backdrops crafted with high luxury visual impact.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">CV</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Camila Vega</span>
+                          <span class="muted micro">Floral Designer</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=elegant-floral-and-balloon-decoration-ideas" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 6: Quinceañera Dress and Color Inspiration -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="quinceanera-dress-and-color-inspiration" data-cat="dresses" data-date="2026-09-05" data-title="Quinceañera Dress and Color Inspiration" data-text="quinceañera dress and color inspiration ball gown corset emerald blush lavender tiara fitting elena rostova">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=quinceanera-dress-and-color-inspiration" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/dress-color-inspiration.jpg" class="blog-card-img" alt="Couture formal quinceañera ball gown in bridal boutique" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Dresses</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>5 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Sep 05, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=quinceanera-dress-and-color-inspiration" class="text-decoration-none text-reset hover-pink">Quinceañera Dress and Color Inspiration</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Discover royal emerald, blush champagne, and celestial lavender silhouettes, detachable cape trains, and fitting timelines from our stylists.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">ER</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Elena Rostova</span>
+                          <span class="muted micro">Creative Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=quinceanera-dress-and-color-inspiration" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 7: Creating a Memorable Entrance and Grand Waltz -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="creating-a-memorable-entrance-and-grand-waltz" data-cat="traditions" data-date="2026-08-28" data-title="Creating a Memorable Entrance and Grand Waltz" data-text="creating a memorable entrance and grand waltz choreography baile sorpresa father daughter court rehearsal mateo cruz">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=creating-a-memorable-entrance-and-grand-waltz" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/entrance-grand-waltz.jpg" class="blog-card-img" alt="Grand waltz celebration court dancing under ballroom chandeliers" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Traditions</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>7 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Aug 28, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=creating-a-memorable-entrance-and-grand-waltz" class="text-decoration-none text-reset hover-pink">Creating a Memorable Entrance and Grand Waltz</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Choreographing emotional father-daughter moments, low-fog cloud effects, court synchronization, and high-energy surprise dance transitions.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">MC</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Mateo Cruz</span>
+                          <span class="muted micro">Production Lead</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=creating-a-memorable-entrance-and-grand-waltz" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 8: Catering and Dessert Table Planning -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="catering-and-dessert-table-planning" data-cat="catering" data-date="2026-08-19" data-title="Catering and Dessert Table Planning" data-text="catering and dessert table planning tiered custom cake mocktail bar churro station plated banquet chef antonio reyes">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=catering-and-dessert-table-planning" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/catering-dessert-table.jpg" class="blog-card-img" alt="Multi-tiered floral celebration cake and dessert table" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Catering</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Aug 19, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=catering-and-dessert-table-planning" class="text-decoration-none text-reset hover-pink">Catering and Dessert Table Planning</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Curating 4-tier statement cakes, custom French macaron towers, artisanal mocktail stations, and late-night hot churro carts for your guests.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">AR</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Chef Antonio Reyes</span>
+                          <span class="muted micro">Executive Chef</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=catering-and-dessert-table-planning" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 9: Photography Ideas for Birthday Celebrations -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="photography-ideas-for-birthday-celebrations" data-cat="photo" data-date="2026-08-11" data-title="Photography Ideas for Birthday Celebrations" data-text="photography ideas for birthday celebrations photoshoot pre-shoot portrait golden hour cape flip drone julian alvarez">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=photography-ideas-for-birthday-celebrations" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/Photography Ideas for Birthday Celebrations.jpg" class="blog-card-img" alt="Professional studio photographer capturing celebration milestone" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Photography</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Aug 11, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=photography-ideas-for-birthday-celebrations" class="text-decoration-none text-reset hover-pink">Photography Ideas for Birthday Celebrations</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Golden-hour garden pre-shoots, iconic ball gown dramatic cape flips, editorial court portraits, and emotional family candid captures.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">JA</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Julian Alvarez</span>
+                          <span class="muted micro">Lead Cinematographer</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=photography-ideas-for-birthday-celebrations" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 10: Entertainment and Music Planning -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="entertainment-and-music-planning" data-cat="music" data-date="2026-07-30" data-title="Entertainment and Music Planning" data-text="entertainment and music planning dj live band hora loca carnival led robots sound transitions dj carlos santana">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=entertainment-and-music-planning" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/entertainment-music-dj.jpg" class="blog-card-img" alt="Concert and DJ lighting dance floor entertainment" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Music</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>5 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jul 30, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=entertainment-and-music-planning" class="text-decoration-none text-reset hover-pink">Entertainment and Music Planning</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Balancing bilingual crossovers, midnight Hora Loca carnival performers, illuminated LED robots, and seamless sound transitions.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">CS</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">DJ Carlos Santana</span>
+                          <span class="muted micro">Entertainment Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=entertainment-and-music-planning" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 11: A Complete Event Planning Checklist -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="a-complete-event-planning-checklist" data-cat="tips" data-date="2026-07-18" data-title="A Complete Event Planning Checklist" data-text="a complete event planning checklist 12 month 18 month timeline month by month vendor deposits church booking sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=a-complete-event-planning-checklist" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/event-planning-checklist.jpg" class="blog-card-img" alt="Complete event planning calendar and checklist notepad" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Planning Tips</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>9 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jul 18, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=a-complete-event-planning-checklist" class="text-decoration-none text-reset hover-pink">A Complete Event Planning Checklist</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">A comprehensive 18-to-1-month countdown covering every milestone: church reservations, vendor deposits, stationery, and dress fittings.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=a-complete-event-planning-checklist" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 12: How to Choose the Right Event Planner -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="how-to-choose-the-right-event-planner" data-cat="tips" data-date="2026-07-02" data-title="How to Choose the Right Event Planner" data-text="how to choose the right event planner interview questions consultation bilingual coordination contracts sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=how-to-choose-the-right-event-planner" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/choose-event-planner.jpg" class="blog-card-img" alt="Event planner meeting and consultation with family" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Planning Tips</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jul 02, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=how-to-choose-the-right-event-planner" class="text-decoration-none text-reset hover-pink">How to Choose the Right Event Planner</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">10 key questions to ask on your vision call, evaluating bilingual expertise, analyzing contract scopes, and day-of coordination guarantees.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=how-to-choose-the-right-event-planner" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 13: Padrino Etiquette & Sponsorship (Budget) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="padrino-etiquette-graciously-asking-and-budgeting-sponsor-gifts" data-cat="budget" data-date="2026-09-22" data-title="Padrino Etiquette: Graciously Asking and Budgeting Sponsor Gifts" data-text="padrino etiquette graciously asking and budgeting sponsor gifts budget finance sponsors contributions family tradition sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=padrino-etiquette-graciously-asking-and-budgeting-sponsor-gifts" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/padrino-sponsor-budget.jpg" class="blog-card-img" alt="Coordinating budget plans and sponsor ledger" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Budget</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>5 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Sep 22, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=padrino-etiquette-graciously-asking-and-budgeting-sponsor-gifts" class="text-decoration-none text-reset hover-pink">Padrino Etiquette: Graciously Asking and Budgeting Sponsor Gifts</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">A culturally grounded, respectful guide on assigning traditional padrino roles, expressing gratitude, and organizing milestone expenses with family harmony.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=padrino-etiquette-graciously-asking-and-budgeting-sponsor-gifts" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 14: Historic Estates vs Modern Ballrooms (Venues) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="historic-estates-vs-modern-luxury-ballrooms" data-cat="venues" data-date="2026-09-18" data-title="Historic Estates vs. Modern Luxury Ballrooms: South Florida Venue Comparison" data-text="historic estates vs modern luxury ballrooms south florida venue comparison venues load in curfews acoustics mateo cruz">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=historic-estates-vs-modern-luxury-ballrooms" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/historic-estate-vs-ballroom.jpg" class="blog-card-img" alt="Luxury historic estate courtyard architecture" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Venues</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>7 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Sep 18, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=historic-estates-vs-modern-luxury-ballrooms" class="text-decoration-none text-reset hover-pink">Historic Estates vs. Modern Luxury Ballrooms: Venue Comparison</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">We analyze load-in logistics, sound curfews, suite amenities, and weather contingencies across premier South Florida celebration properties.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">MC</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Mateo Cruz</span>
+                          <span class="muted micro">Logistics Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=historic-estates-vs-modern-luxury-ballrooms" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 15: Wardrobe Change Secrets (Dresses) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="from-ballgown-to-surprise-dance-seamless-wardrobe-change-secrets" data-cat="dresses" data-date="2026-09-09" data-title="From Ballgown to Surprise Dance: Seamless Wardrobe Change Secrets" data-text="from ballgown to surprise dance seamless wardrobe change secrets dresses ballgown corset shoes change choreography elena rostova">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=from-ballgown-to-surprise-dance-seamless-wardrobe-change-secrets" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/wardrobe-change-secrets.jpg" class="blog-card-img" alt="Couture dress details and celebration shoes" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Dresses</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Sep 09, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=from-ballgown-to-surprise-dance-seamless-wardrobe-change-secrets" class="text-decoration-none text-reset hover-pink">From Ballgown to Surprise Dance: Wardrobe Change Secrets</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Tips for quick-change corsets, bustle safety, shoe change choreography, and keeping your second outfit fresh for the high-energy dance floor.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">ER</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Elena Rostova</span>
+                          <span class="muted micro">Creative Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=from-ballgown-to-surprise-dance-seamless-wardrobe-change-secrets" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 16: Modern Lighting Trends (Décor) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="modern-lighting-trends-cold-spark-fountains-monograms-led-walls" data-cat="decor" data-date="2026-08-30" data-title="Modern Lighting Trends: Cold-Spark Fountains, Monograms & LED Walls" data-text="modern lighting trends cold spark fountains monograms led walls decor lighting ambiance stage effects sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=modern-lighting-trends-cold-spark-fountains-monograms-led-walls" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/modern-lighting-trends.jpg" class="blog-card-img" alt="Stage lighting and ambient dance party effects" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Décor</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Aug 30, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=modern-lighting-trends-cold-spark-fountains-monograms-led-walls" class="text-decoration-none text-reset hover-pink">Modern Lighting Trends: Cold-Spark Fountains &amp; LED Walls</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Elevate your gala entrance with indoor-safe cold sparks, custom animated floor monograms, and dramatic uplighting tailored to your theme.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=modern-lighting-trends-cold-spark-fountains-monograms-led-walls" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 17: The Brindis & Crowning Ceremony (Traditions) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="the-brindis-crowning-ceremony-order-of-events-and-heartfelt-speeches" data-cat="traditions" data-date="2026-08-24" data-title="The Brindis & Crowning Ceremony: Order of Events and Heartfelt Speeches" data-text="the brindis crowning ceremony order of events heartfelt speeches traditions toast speeches tiara father daughter waltz sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=the-brindis-crowning-ceremony-order-of-events-and-heartfelt-speeches" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/brindis-crowning-ceremony.jpg" class="blog-card-img" alt="Crystal toast glasses for the formal brindis ceremony" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Traditions</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>8 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Aug 24, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=the-brindis-crowning-ceremony-order-of-events-and-heartfelt-speeches" class="text-decoration-none text-reset hover-pink">The Brindis &amp; Crowning Ceremony: Speeches &amp; Timeline</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">A complete master of ceremonies outline for the tiara crowning, changing of shoes, ceremonial toast, and sentimental father-daughter valse.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=the-brindis-crowning-ceremony-order-of-events-and-heartfelt-speeches" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 18: Bespoke Mocktails & Dessert Bars (Catering) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="bespoke-mocktail-bars-midnight-sweet-stations" data-cat="catering" data-date="2026-08-12" data-title="Bespoke Mocktail Bars & Midnight Sweet Stations Your Guests Will Adore" data-text="bespoke mocktail bars midnight sweet stations catering desserts churros pastries macaron towers menu hospitality mateo cruz">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=bespoke-mocktail-bars-midnight-sweet-stations" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/mocktail-sweet-stations.jpg" class="blog-card-img" alt="Dessert table and gourmet pastries display" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Catering</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>5 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Aug 12, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=bespoke-mocktail-bars-midnight-sweet-stations" class="text-decoration-none text-reset hover-pink">Bespoke Mocktail Bars &amp; Midnight Sweet Stations</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Curate signature non-alcoholic fruit elixirs, churro fondue bars, and customized French macaron towers designed for teen celebrations.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">MC</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Mateo Cruz</span>
+                          <span class="muted micro">Logistics Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=bespoke-mocktail-bars-midnight-sweet-stations" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 19: Golden Hour Pre-Shoots (Photography) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="golden-hour-pre-shoots-posing-guide-location-ideas" data-cat="photo" data-date="2026-07-28" data-title="Golden Hour Pre-Shoots: Posing Guide, Location Ideas & Canvas Prints" data-text="golden hour pre shoots posing guide location ideas canvas prints photo photography portraits estate garden album mateo cruz">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=golden-hour-pre-shoots-posing-guide-location-ideas" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/golden-hour-pre-shoots.jpg" class="blog-card-img" alt="Formal golden hour portrait photography session" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Photography</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>7 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jul 28, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=golden-hour-pre-shoots-posing-guide-location-ideas" class="text-decoration-none text-reset hover-pink">Golden Hour Pre-Shoots: Posing Guide &amp; Canvas Prints</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Everything you need to know about scheduling your formal portrait session 6 weeks prior, selecting estate gardens, and framing gala entrance canvases.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">MC</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Mateo Cruz</span>
+                          <span class="muted micro">Logistics Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=golden-hour-pre-shoots-posing-guide-location-ideas" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 20: Choreographing Surprise Dance (Music) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="choreographing-the-surprise-dance-music-transitions" data-cat="music" data-date="2026-07-15" data-title="Choreographing the Surprise Dance: Music Transitions & Rehearsal Schedule" data-text="choreographing the surprise dance music transitions rehearsal schedule music dj entertainment choreography court of honor remix elena rostova">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=choreographing-the-surprise-dance-music-transitions" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/surprise-dance-choreography.jpg" class="blog-card-img" alt="Party dance floor and live DJ mixing console" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Music</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jul 15, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=choreographing-the-surprise-dance-music-transitions" class="text-decoration-none text-reset hover-pink">Choreographing the Surprise Dance: Music Transitions</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">How to blend reggaeton, pop anthems, and traditional rhythms into a seamless 4-minute showstopper with your court of honor.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">ER</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Elena Rostova</span>
+                          <span class="muted micro">Creative Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=choreographing-the-surprise-dance-music-transitions" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 21: Day-of Survival Kit (Planning Tips) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="the-quinceanera-day-of-survival-kit" data-cat="tips" data-date="2026-07-02" data-title="The Quinceañera Day-of Survival Kit: 25 Essentials for Mom & Daughter" data-text="the quinceañera day of survival kit 25 essentials for mom daughter tips planning checklist emergency kit beauty fashion tape sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=the-quinceanera-day-of-survival-kit" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/25 Essentials for Mom & Daughter.jpg" class="blog-card-img" alt="Beauty essentials and emergency styling vanity" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Planning Tips</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>5 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jul 02, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=the-quinceanera-day-of-survival-kit" class="text-decoration-none text-reset hover-pink">Day-of Survival Kit: 25 Essentials for Mom &amp; Daughter</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">From fashion tape and blister cushions to backup earring backs and stain remover pens, avoid last-minute stress with our planner checklist.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=the-quinceanera-day-of-survival-kit" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 22: Midnight Masquerade (Themes) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="midnight-masquerade-velvet-drapes-golden-masks" data-cat="themes" data-date="2026-06-20" data-title="Midnight Masquerade: Velvet Drapes, Golden Masks & Dramatic Entrances" data-text="midnight masquerade velvet drapes golden masks dramatic entrances themes sweet sixteen masquerade venetian baroque elena rostova">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=midnight-masquerade-velvet-drapes-golden-masks" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/midnight-masquerade-theme.jpg" class="blog-card-img" alt="Golden bokeh party glam and masquerade lighting" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Themes</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jun 20, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=midnight-masquerade-velvet-drapes-golden-masks" class="text-decoration-none text-reset hover-pink">Midnight Masquerade: Velvet Drapes &amp; Golden Masks</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Immerse your guests in baroque mystery with Venetian mask favors, moody plum floral arches, and candlelit ballroom centerpieces.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">ER</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Elena Rostova</span>
+                          <span class="muted micro">Creative Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=midnight-masquerade-velvet-drapes-golden-masks" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 23: Outdoor Tented Galas (Venues) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="planning-an-outdoor-tented-gala" data-cat="venues" data-date="2026-06-08" data-title="Planning an Outdoor Tented Gala: Flooring, AC Units & Backup Generators" data-text="planning an outdoor tented gala flooring ac units backup generators venues outdoor estate tenting climate control mateo cruz">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=planning-an-outdoor-tented-gala" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/outdoor-tented-gala.jpg" class="blog-card-img" alt="Luxurious outdoor gala tent setup with chandeliers" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Venues</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>8 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>Jun 08, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=planning-an-outdoor-tented-gala" class="text-decoration-none text-reset hover-pink">Outdoor Tented Galas: Flooring, AC &amp; Generators</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Crucial infrastructure advice for private estate celebrations to ensure high heels never sink and ballroom temperatures stay crisp all night.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">MC</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Mateo Cruz</span>
+                          <span class="muted micro">Logistics Director</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=planning-an-outdoor-tented-gala" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Article 24: Jewel-Tone Gowns (Dresses) -->
+              <div class="col-12 col-md-6 col-lg-4 post" data-id="jewel-tone-quinceanera-gowns" data-cat="dresses" data-date="2026-05-25" data-title="Jewel-Tone Quinceañera Gowns: Styling Emerald Green, Ruby & Royal Blue" data-text="jewel tone quinceañera gowns styling emerald green ruby royal blue dresses embroidery metallics tiara styling sofia morales">
+                <article class="card h-100 lift blog-card border">
+                  <div class="blog-card-media position-relative overflow-hidden">
+                    <a href="blog-details.html?id=jewel-tone-quinceanera-gowns" class="d-block overflow-hidden" aria-label="Read full article">
+                      <img src="assets/img/blog/jewel-tone-quince-gowns.jpg" class="blog-card-img" alt="Embroidered couture gown details and royal textile fabrics" loading="lazy" width="800" height="500">
+                    </a>
+                    <span class="badge-gold position-absolute top-0 end-0 m-3 shadow-sm">Dresses</span>
+                  </div>
+                  <div class="card-body d-flex flex-column p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-2 small muted">
+                      <span><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                      <span><i class="bi bi-calendar3 me-1 text-gold"></i>May 25, 2026</span>
+                    </div>
+                    <h3 class="h5 mb-2 blog-card-title">
+                      <a href="blog-details.html?id=jewel-tone-quinceanera-gowns" class="text-decoration-none text-reset hover-pink">Jewel-Tone Gowns: Emerald Green, Ruby &amp; Royal Blue</a>
+                    </h3>
+                    <p class="muted small mb-3 flex-grow-1 blog-card-desc">Move beyond pastels with rich regal tones: how to coordinate metallic champagne embroidery, dama dresses, and matching tiara metals.</p>
+                    <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="avatar avatar-sm fw-bold">SM</div>
+                        <div class="d-flex flex-column lh-1">
+                          <span class="fw-semibold small">Sofia Morales</span>
+                          <span class="muted micro">Lead Planner</span>
+                        </div>
+                      </div>
+                      <a href="blog-details.html?id=jewel-tone-quinceanera-gowns" class="btn btn-outline-brand btn-sm px-3 py-1">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- No Results Feedback State -->
+            <div id="noPosts" class="card text-center p-5 mt-4 border-dashed" hidden>
+              <div class="mb-3 text-pink fs-1"><i class="bi bi-journal-x"></i></div>
+              <h3 class="h4 mb-2">No Matching Articles Found</h3>
+              <p class="muted mx-auto mb-4" style="max-width: 480px;">We couldn't find any articles matching your search or filter criteria. Try adjusting your search term or reset all filters.</p>
+              <div>
+                <button type="button" class="btn btn-outline-brand" id="resetBlogFiltersBtn"><i class="bi bi-arrow-counterclockwise me-1"></i>Reset All Filters</button>
+              </div>
+            </div>
+
+            <!-- Working Load More Pagination Button -->
+            <div class="text-center mt-5">
+              <button id="loadMoreBtn" class="btn btn-outline-brand btn-lg px-4" type="button">Load More Articles (6 more)</button>
+            </div>
+
+            <!-- Preserved Editorial & Planning Resources Row (Clean 3-column layout below articles) -->
+            <div class="row g-4 mt-5 pt-4 border-top">
+              <!-- Card 1: Free Consultation Callout -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card p-4 h-100 text-center d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="ico mb-2 fs-2 text-pink"><i class="bi bi-crown-fill"></i></div>
+                    <h3 class="h5 mb-2">Need a Bilingual Planner?</h3>
+                    <p class="muted small mb-3">Our lead designers guide you through dates, ballroom tours, padrino etiquette, and waltz rehearsal schedules.</p>
+                  </div>
+                  <a href="contact.html#booking" class="btn btn-brand w-100">Book Free Vision Call</a>
+                </div>
+              </div>
+
+              <!-- Card 2: Featured Editorial Stories -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card p-4 h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <h3 class="h5 mb-3"><i class="bi bi-star-fill me-2 text-gold"></i>Featured Stories</h3>
+                    <div class="d-flex flex-column gap-2">
+                      <a href="blog-details.html?id=quinceanera-theme-ideas" class="d-flex align-items-center gap-3 text-decoration-none text-reset lift p-2 rounded-3 border">
+                        <div class="sidebar-rank-num">01</div>
+                        <div class="flex-grow-1 overflow-hidden">
+                          <span class="badge-gold small py-0 px-2 mb-1">Themes</span>
+                          <h4 class="h6 mb-1 text-truncate-2">Quinceañera Theme Ideas</h4>
+                          <span class="muted small"><i class="bi bi-clock me-1 text-pink"></i>6 min read</span>
+                        </div>
+                      </a>
+                      <a href="blog-details.html?id=quinceanera-dress-and-color-inspiration" class="d-flex align-items-center gap-3 text-decoration-none text-reset lift p-2 rounded-3 border">
+                        <div class="sidebar-rank-num">02</div>
+                        <div class="flex-grow-1 overflow-hidden">
+                          <span class="badge-gold small py-0 px-2 mb-1">Dresses</span>
+                          <h4 class="h6 mb-1 text-truncate-2">Dress &amp; Color Inspiration</h4>
+                          <span class="muted small"><i class="bi bi-clock me-1 text-pink"></i>5 min read</span>
+                        </div>
+                      </a>
+                      <a href="blog-details.html?id=creating-a-memorable-entrance-and-grand-waltz" class="d-flex align-items-center gap-3 text-decoration-none text-reset lift p-2 rounded-3 border">
+                        <div class="sidebar-rank-num">03</div>
+                        <div class="flex-grow-1 overflow-hidden">
+                          <span class="badge-gold small py-0 px-2 mb-1">Traditions</span>
+                          <h4 class="h6 mb-1 text-truncate-2">Memorable Entrance &amp; Waltz</h4>
+                          <span class="muted small"><i class="bi bi-clock me-1 text-pink"></i>7 min read</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Newsletter Card Widget -->
+              <div class="col-lg-4 col-md-12">
+                <div class="card p-4 h-100 d-flex flex-column justify-content-between">
+                  <div>
+                    <h3 class="h5 mb-2"><i class="bi bi-envelope-heart me-2 text-pink"></i>Get Monthly Guides</h3>
+                    <p class="muted small mb-3">Join 2,400+ parents receiving our monthly trend breakdowns, budget templates, and timeline checklists.</p>
+                  </div>
+                  <form id="sidebarNewsletter" data-validate novalidate>
+                    <div class="mb-2">
+                      <label class="visually-hidden" for="snlEmail">Email address</label>
+                      <input class="form-control" id="snlEmail" type="email" placeholder="family@example.com" required>
+                    </div>
+                    <button class="btn btn-brand w-100" type="submit">Subscribe Free</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    <!-- 3. Booking Call to Action -->
+    <section class="section alt">
+      <div class="container">
+        <div class="text-center mb-4 reveal">
+          <span class="badge-gold mb-2">Start Your Journey</span>
+          <h2>Have Questions About Planning Her Milestone?</h2>
+          <p class="muted mx-auto" style="max-width: 620px;">
+            Tell us your dream theme, guest count, and traditions—our bilingual planners will craft a stress-free roadmap tailored to your family.
+          </p>
+        </div>
+        <div class="text-center reveal">
+          <a class="btn btn-brand btn-lg me-2 mb-2" href="contact.html#booking">Book a Consultation</a>
+          <a class="btn btn-outline-brand btn-lg mb-2" href="packages.html">Explore Packages</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 pb-4">
+        <!-- Column 1 – Brand -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a class="brand d-inline-flex mb-3" href="index.html" aria-label="Fiesta Rosa Events Home">
+            <img src="assets/img/icons/logo-mark.svg" alt="Fiesta Rosa Logo Mark" class="brand-mark" width="42" height="42">
+            <span class="brand-text">Fiesta<em>Rosa</em></span>
+          </a>
+          <p class="footer-desc mb-3">
+            South Florida’s premier couture Quinceañera and Sweet Sixteen planning studio. Designing breathtaking milestones where sacred family traditions blend seamlessly with modern luxury.
+          </p>
+          <div class="footer-social d-flex flex-wrap gap-2" aria-label="Official Social Media Links">
+            <a class="soc" href="https://instagram.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Instagram profile" title="Follow Fiesta Rosa on Instagram">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://facebook.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Facebook page" title="Follow Fiesta Rosa on Facebook">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://pinterest.com/fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official Pinterest boards" title="Browse celebration themes on Pinterest">
+              <i class="bi bi-pinterest" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://youtube.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official YouTube channel" title="Watch event cinematic films on YouTube">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="soc" href="https://tiktok.com/@fiestarosaevents" target="_blank" rel="noopener noreferrer" aria-label="Official TikTok profile" title="Follow behind the scenes on TikTok">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 – Quick Links -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Quick Links</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="index.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Services</a></li>
+            <li><a href="packages.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Packages</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 – Customer Support -->
+        <div class="col-6 col-lg-2 col-md-3 mb-4 mb-lg-0">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Customer Support</h2>
+          <ul class="list-unstyled footer-links d-grid gap-2 mb-0">
+            <li><a href="contact.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Contact Us</a></li>
+            <li><a href="dashboard.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Client Portal</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Login</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>Register</a></li>
+            <li><a href="contact.html#faqs"><i class="bi bi-chevron-right me-2 footer-chevron" aria-hidden="true"></i>FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 – Contact Information -->
+        <div class="col-lg-4 col-md-12">
+          <h2 class="h6 footer-heading tw-uppercase tw-tracking-wider">Contact Information</h2>
+          <ul class="list-unstyled footer-contact d-grid gap-2 mb-4">
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-envelope-heart"></i></span>
+              <div><strong class="contact-label">Email:</strong> <a href="mailto:hello@fiestarosa.example" class="text-reset text-decoration-none">hello@fiestarosa.example</a></div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-telephone-outbound"></i></span>
+              <div><strong class="contact-label">Phone:</strong> <a href="tel:+919876543210" class="text-reset text-decoration-none">+91 98765 43210</a> / +1 (555) 123-4567</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-geo-alt"></i></span>
+              <div><strong class="contact-label">Address:</strong> 123 Celebration Ave, Coral Gables, Miami, FL 33134</div>
+            </li>
+            <li class="footer-contact-item">
+              <span class="contact-icon" aria-hidden="true"><i class="bi bi-clock"></i></span>
+              <div><strong class="contact-label">Hours:</strong> Mon – Sat: 9:00 AM – 7:00 PM | Sun: By Appointment</div>
+            </li>
+          </ul>
+          <!-- Newsletter Quick Signup (Unified Pill Input Group) -->
+          <form id="newsletter" data-validate novalidate class="footer-newsletter">
+            <div class="footer-input-group">
+              <label class="visually-hidden" for="nl">Subscribe for celebration tips</label>
+              <input id="nl" class="form-control" type="email" placeholder="Your email address" required>
+              <button class="btn btn-brand" type="submit">Subscribe</button>
+            </div>
+            <p class="form-ok small mt-2" role="status" hidden>Thanks for subscribing to our celebration guide! 🎉</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Full-Width Divider -->
+      <hr class="footer-divider my-3">
+
+      <!-- Balanced Bottom Row -->
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center py-2 gap-2 small">
+        <p class="mb-0 copy-text opacity-75">
+          © 2026 Fiesta Rosa Events. All rights reserved. Quinceañera &amp; Sweet Sixteen Event Planners.
+        </p>
+        <div class="footer-legal d-flex flex-wrap gap-3 opacity-75">
+          <a href="about.html#values" class="text-decoration-none">Privacy Policy</a>
+          <span>·</span>
+          <a href="packages.html#compare" class="text-decoration-none">Terms of Service</a>
+          <span>·</span>
+          <a href="dashboard.html" class="text-decoration-none">Planning Portal (Demo)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" type="button" aria-label="Scroll to top" hidden>↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/blog-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

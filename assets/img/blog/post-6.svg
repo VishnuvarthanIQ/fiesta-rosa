@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#28113d"/>
+    <stop offset="52%" stop-color="#691e69"/>
+    <stop offset="100%" stop-color="#c43c80"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+    <stop offset="0%" stop-color="#ffe8a3" stop-opacity="0.75"/>
+    <stop offset="55%" stop-color="#f48fb1" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#fff2b2"/>
+    <stop offset="50%" stop-color="#f0c14b"/>
+    <stop offset="100%" stop-color="#b8860b"/>
+  </linearGradient>
+  <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#090312" stop-opacity="0.65"/>
+  </linearGradient>
+</defs>
+<rect width="800" height="600" fill="url(#bg)"/>
+<ellipse cx="400" cy="252" rx="384" ry="252" fill="url(#glow)"/>
+<circle cx="112" cy="304" r="22" fill="url(#glow)" opacity="0.28"/><circle cx="496" cy="552" r="34" fill="#ffd978" opacity="0.33"/><circle cx="524" cy="575" r="76" fill="url(#glow)" opacity="0.27"/><circle cx="93" cy="352" r="22" fill="#ffd978" opacity="0.15"/><circle cx="796" cy="83" r="35" fill="url(#glow)" opacity="0.08"/><circle cx="34" cy="7" r="76" fill="#ffd978" opacity="0.13"/><circle cx="623" cy="191" r="21" fill="url(#glow)" opacity="0.25"/><circle cx="386" cy="472" r="35" fill="#ffd978" opacity="0.33"/><circle cx="199" cy="599" r="75" fill="url(#glow)" opacity="0.29"/><circle cx="753" cy="459" r="21" fill="#ffd978" opacity="0.18"/><circle cx="0" cy="177" r="36" fill="url(#glow)" opacity="0.09"/><circle cx="723" cy="4" r="75" fill="#ffd978" opacity="0.1"/><circle cx="250" cy="94" r="21" fill="url(#glow)" opacity="0.21"/><circle cx="330" cy="368" r="36" fill="#ffd978" opacity="0.31"/><circle cx="667" cy="580" r="75" fill="url(#glow)" opacity="0.31"/><circle cx="15" cy="543" r="20" fill="#ffd978" opacity="0.21"/><circle cx="784" cy="288" r="37" fill="url(#glow)" opacity="0.11"/><circle cx="132" cy="44" r="75" fill="#ffd978" opacity="0.09"/><circle cx="469" cy="27" r="20" fill="url(#glow)" opacity="0.18"/><circle cx="549" cy="253" r="37" fill="#ffd978" opacity="0.29"/><circle cx="76" cy="521" r="75" fill="url(#glow)" opacity="0.33"/><circle cx="799" cy="591" r="20" fill="#ffd978" opacity="0.25"/><circle cx="46" cy="401" r="38" fill="url(#glow)" opacity="0.13"/><circle cx="600" cy="121" r="75" fill="#ffd978" opacity="0.08"/><circle cx="413" cy="0" r="19" fill="url(#glow)" opacity="0.15"/><circle cx="176" cy="146" r="38" fill="#ffd978" opacity="0.26"/><circle cx="765" cy="429" r="74" fill="url(#glow)" opacity="0.33"/><circle cx="3" cy="596" r="19" fill="#ffd978" opacity="0.28"/>
+<path d="M50 107 L51.7 111.3 L56 113 L51.7 114.7 L50 119 L48.3 114.7 L44 113 L48.3 111.3 Z" fill="#fff6d6" opacity="0.85"/><path d="M507 350 L509.5 356.5 L516 359 L509.5 361.5 L507 368 L504.5 361.5 L498 359 L504.5 356.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M626 4 L629.4 12.6 L638 16 L629.4 19.4 L626 28 L622.6 19.4 L614 16 L622.6 12.6 Z" fill="#fff6d6" opacity="0.85"/><path d="M32 421 L36.2 431.8 L47 436 L36.2 440.2 L32 451 L27.8 440.2 L17 436 L27.8 431.8 Z" fill="#fff6d6" opacity="0.85"/><path d="M596 -54 L601.0 -41.0 L614 -36 L601.0 -31.0 L596 -18 L591.0 -31.0 L578 -36 L591.0 -41.0 Z" fill="#fff6d6" opacity="0.85"/><path d="M541 455 L542.7 459.3 L547 461 L542.7 462.7 L541 467 L539.3 462.7 L535 461 L539.3 459.3 Z" fill="#fff6d6" opacity="0.85"/><path d="M40 -41 L42.5 -34.5 L49 -32 L42.5 -29.5 L40 -23 L37.5 -29.5 L31 -32 L37.5 -34.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M671 417 L674.4 425.6 L683 429 L674.4 432.4 L671 441 L667.6 432.4 L659 429 L667.6 425.6 Z" fill="#fff6d6" opacity="0.85"/><path d="M447 11 L451.2 21.8 L462 26 L451.2 30.2 L447 41 L442.8 30.2 L432 26 L442.8 21.8 Z" fill="#fff6d6" opacity="0.85"/><path d="M74 328 L79.0 341.0 L92 346 L79.0 351.0 L74 364 L69.0 351.0 L56 346 L69.0 341.0 Z" fill="#fff6d6" opacity="0.85"/><path d="M727 122 L728.7 126.3 L733 128 L728.7 129.7 L727 134 L725.3 129.7 L721 128 L725.3 126.3 Z" fill="#fff6d6" opacity="0.85"/><path d="M349 223 L351.5 229.5 L358 232 L351.5 234.5 L349 241 L346.5 234.5 L340 232 L346.5 229.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M130 236 L133.4 244.6 L142 248 L133.4 251.4 L130 260 L126.6 251.4 L118 248 L126.6 244.6 Z" fill="#fff6d6" opacity="0.85"/><path d="M760 98 L764.2 108.8 L775 113 L764.2 117.2 L760 128 L755.8 117.2 L745 113 L755.8 108.8 Z" fill="#fff6d6" opacity="0.85"/><path d="M255 341 L260.0 354.0 L273 359 L260.0 364.0 L255 377 L250.0 364.0 L237 359 L250.0 354.0 Z" fill="#fff6d6" opacity="0.85"/><path d="M206 10 L207.7 14.3 L212 16 L207.7 17.7 L206 22 L204.3 17.7 L200 16 L204.3 14.3 Z" fill="#fff6d6" opacity="0.85"/><path d="M767 427 L769.5 433.5 L776 436 L769.5 438.5 L767 445 L764.5 438.5 L758 436 L764.5 433.5 Z" fill="#fff6d6" opacity="0.85"/><path d="M171 -48 L174.4 -39.4 L183 -36 L174.4 -32.6 L171 -24 L167.6 -32.6 L159 -36 L167.6 -39.4 Z" fill="#fff6d6" opacity="0.85"/>
+
+        <!-- 12-Month Planning Calendar -->
+        <rect x="170" y="130" width="460" height="340" rx="22" fill="#fff9fb" fill-opacity="0.2" stroke="url(#goldGrad)" stroke-width="5"/>
+        <rect x="170" y="130" width="460" height="70" rx="22" fill="url(#goldGrad)" opacity="0.85"/>
+        <g fill="#fff" opacity="0.75">
+          <rect x="215" y="235" width="70" height="50" rx="8"/><rect x="315" y="235" width="70" height="50" rx="8"/><rect x="415" y="235" width="70" height="50" rx="8"/><rect x="515" y="235" width="70" height="50" rx="8"/>
+          <rect x="215" y="310" width="70" height="50" rx="8"/><rect x="315" y="310" width="70" height="50" rx="8" fill="#ff80ab"/><rect x="415" y="310" width="70" height="50" rx="8"/><rect x="515" y="310" width="70" height="50" rx="8"/>
+          <rect x="215" y="385" width="70" height="50" rx="8"/><rect x="315" y="385" width="70" height="50" rx="8"/><rect x="415" y="385" width="70" height="50" rx="8"/><rect x="515" y="385" width="70" height="50" rx="8" fill="#ffd978"/>
+        </g>
+    
+</svg>
