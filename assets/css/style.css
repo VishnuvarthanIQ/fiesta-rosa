@@ -3403,6 +3403,108 @@ img {
   margin-top: 4px;
 }
 
+/* Auth Social Divider & Social Buttons (Google & Apple) */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.15rem 0;
+}
+
+.auth-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border);
+}
+
+.auth-divider-text {
+  padding: 0 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.auth-social-btns {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.95rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 50rem;
+  border: 1.5px solid var(--border);
+  background-color: var(--surface);
+  color: var(--text);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.auth-social-btn:hover,
+.auth-social-btn:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--pink);
+  color: var(--pink);
+  box-shadow: 0 6px 16px rgba(194, 24, 91, 0.16);
+  background-color: var(--soft);
+}
+
+.auth-social-btn .auth-social-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.auth-social-btn.btn-social-apple .auth-social-icon {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.auth-social-btn.btn-social-apple:hover .auth-social-icon,
+.auth-social-btn.btn-social-apple:focus-visible .auth-social-icon {
+  color: var(--pink);
+}
+
+/* Dark Theme Overrides for Social Buttons */
+[data-theme="dark"] .auth-social-btn,
+[data-bs-theme="dark"] .auth-social-btn {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 215, 0, 0.35);
+  color: #f7f0fc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .auth-social-btn:hover,
+[data-bs-theme="dark"] .auth-social-btn:focus-visible {
+  background-color: rgba(255, 215, 0, 0.12);
+  border-color: #ffd700;
+  color: #ffd700;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
+}
+
+[data-theme="dark"] .auth-social-btn.btn-social-apple .auth-social-icon {
+  color: #f7f0fc;
+}
+
+[data-theme="dark"] .auth-social-btn.btn-social-apple:hover .auth-social-icon,
+[data-theme="dark"] .auth-social-btn.btn-social-apple:focus-visible .auth-social-icon {
+  color: #ffd700;
+}
+
 /* 15. Standalone App Dashboard Layout (Sidebar Only) */
 .dashboard-wrapper {
   display: flex;

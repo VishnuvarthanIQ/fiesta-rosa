@@ -944,6 +944,53 @@ $('#forgotPassLink')?.addEventListener('click', (e) => {
   });
 });
 
+/* Social Authentication Handler (Google & Apple) */
+document.addEventListener('click', (e) => {
+  const socialBtn = e.target.closest('.auth-social-btn');
+  if (!socialBtn) return;
+  e.preventDefault();
+
+  const provider = socialBtn.dataset.provider || (socialBtn.classList.contains('btn-social-apple') ? 'Apple' : 'Google');
+  const isRegisterPage = document.body.classList.contains('auth-page-register') || !!document.getElementById('register');
+
+  const mockEmail = provider === 'Apple' ? 'sofia.reyes@privaterelay.appleid.com' : 'sofia.reyes@gmail.com';
+  const mockName = 'Sofia Reyes';
+  const mockPhone = '9876543210';
+
+  // Save session
+  store.set('session', {
+    name: mockName,
+    email: mockEmail,
+    phone: mockPhone,
+    provider: provider
+  });
+
+  // Ensure user is in registered_users store
+  const users = store.get('registered_users', []);
+  if (!users.some(u => (u.email || '').toLowerCase() === mockEmail.toLowerCase())) {
+    users.push({
+      name: mockName,
+      email: mockEmail,
+      phone: mockPhone,
+      password: 'SocialLogin123!',
+      provider: provider,
+      createdAt: new Date().toISOString()
+    });
+    store.set('registered_users', users);
+  }
+
+  if (typeof syncAuthHeader === 'function') syncAuthHeader();
+
+  const actionText = isRegisterPage ? 'Registered and signed in' : 'Signed in';
+  window.showDemoModal({
+    title: `${provider} Authentication`,
+    message: `${actionText} successfully with ${provider}! Welcome to your Fiesta Rosa portal, ${mockName}.`,
+    badge: `${provider} Connected`,
+    icon: provider === 'Apple' ? 'bi-apple' : 'bi-check-circle-fill',
+    isSuccess: true
+  });
+});
+
 $$('form[data-validate]').forEach(form => {
   $$('input, select, textarea', form).forEach(el => {
     // 1. Keydown prevention for name and phone
